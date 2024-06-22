@@ -2,6 +2,7 @@
 
 # Projetos DevOps do mundo real para aspirantes a engenheiros de DevOps [do iniciante ao avançado]
 
+<p align="center"><img src="personalproject.jpg"/></p>
 
 ## Conteúdo do repositório é para projetos DevOps do nível iniciante ao avançado
 
