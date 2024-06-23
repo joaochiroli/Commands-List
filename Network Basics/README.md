@@ -1,4 +1,4 @@
-## Network Basics
+ ## 🌐 Network Basics
 
 <details>
 <summary>Seção 1: Introdução de redes</summary><br>
