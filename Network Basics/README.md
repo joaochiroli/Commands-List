@@ -31,15 +31,15 @@
 
 - **LAN (Local Area Network)**: Uma rede local, geralmente dentro de um único prédio ou campus, que conecta dispositivos próximos. A imagem abaixo representa uma rede LAN, em que vários dispositivos são conectados a um Switch e esse Switch é conectado a um Roteador. Na casa de vocês funciona da mesma maneira, porém, o moldem possui o roteador e o switch já embutidos, normalmente essa separação é feita em sistemas mais complexos como empresas.
 
-![Untitled](https://prod-files-secure.s3.us-west-2.amazonaws.com/eae8b1f3-dad8-4cc7-bb8b-7d233c21a622/100a98c2-6306-4f4c-aceb-22ceebb1bd0d/Untitled.png)
+<p align="center"><img src="images/Untitled (1).png"/></p>
 
 - **MAN (Metropolitan Area Network)**: Uma rede que cobre uma área geográfica menor que uma WAN mas maior que uma LAN, como uma cidade.
 
-![Untitled](https://prod-files-secure.s3.us-west-2.amazonaws.com/eae8b1f3-dad8-4cc7-bb8b-7d233c21a622/a3374e5d-c481-43b3-8727-e442b772796f/Untitled.png)
+
 
 - **WAN (Wide Area Network)**: Uma rede ampla que cobre grandes distâncias, como entre cidades ou países, conectando várias LANs.
 
-![Untitled](https://prod-files-secure.s3.us-west-2.amazonaws.com/eae8b1f3-dad8-4cc7-bb8b-7d233c21a622/574cca5e-07ee-4d86-9a68-f5b785866ac2/Untitled.png)
+
 
 Detalhando um pouco mais é interessante saber que todo o planeta está conectado através de cabos que passam pelos oceanos ou pela terra, possibilitando assim mantermos conexões entre computadores. 
 
@@ -55,7 +55,7 @@ A grosso modo rede de computadores se assemelha e muito ao nosso tráfego de vei
 
 Em resumo, redes de computadores e a internet, são formas de conexão que possibilitam a comunição entre uma **origem e um destino.** Normalmente uma conexão entre um computador e um servidor.
 
-![Untitled](https://prod-files-secure.s3.us-west-2.amazonaws.com/eae8b1f3-dad8-4cc7-bb8b-7d233c21a622/c0a66584-35cb-4ecc-a836-6fb8d2da71e5/Untitled.png)
+
 
 ### Quais são os componentes de uma rede ?
 
