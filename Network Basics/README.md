@@ -66,9 +66,4 @@ Em resumo, redes de computadores e a internet, são formas de conexão que possi
 
 Os equipamentos de rede e os protocolos, principalmente os protocolos de rede, são a base para todo o resto, entender como funcionam é um divisor de aguás. A respeito deste tema, seguiremos com explicações mais detalhadas no próximo capitulo. 
 
-Dessa maneira com a popularização da internet, os primeiros dispositivos começaram a se conectar e compartilhar dados. Porém isso foi um problema, já que não havia uma padronização, ou seja, se uma empresa comprasse comprasse roteadores da cisco, os switches e demais dispositivos de rede também teriam que ser da cisco, gerando assim desafios significativos na comunicação entre diferentes sistemas de computadores.
-
-Por conta disso, os protocolos de comunicação de redes de computadores foram criados para padronizar a maneira como os dispositivos se comunicam e compartilham dados, resolvendo problemas de incompatibilidade.
-
-Os protocolos de redes são nada mais nada menos do que conjuntos de regras que possibilitam a comunicação entre dispositivos em uma redecomplete observability stack that allows you to monitor and analyze metrics, logs and traces. It allows you to query, visualize, alert on and understand your data no matter where it is stored. Create, explore, and share beautiful dashboards with your team and foster a data driven culture."
 </b></details>
