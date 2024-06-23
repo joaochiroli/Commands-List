@@ -31,7 +31,9 @@
 
 - **LAN (Local Area Network)**: Uma rede local, geralmente dentro de um único prédio ou campus, que conecta dispositivos próximos. A imagem abaixo representa uma rede LAN, em que vários dispositivos são conectados a um Switch e esse Switch é conectado a um Roteador. Na casa de vocês funciona da mesma maneira, porém, o moldem possui o roteador e o switch já embutidos, normalmente essa separação é feita em sistemas mais complexos como empresas.
 
-<p align="center"><img src="images/Untitled (1).png"/></p>
+<p align="center">
+  <img width="460" height="300" src="Untitled (1).png">
+</p>
 
 - **MAN (Metropolitan Area Network)**: Uma rede que cobre uma área geográfica menor que uma WAN mas maior que uma LAN, como uma cidade.
 
