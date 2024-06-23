@@ -1,0 +1,74 @@
+## Network Basics
+
+<details>
+<summary>Seção 1: Introdução de redes</summary><br><b>
+
+ O que são redes de computadores?
+
+- Trata de um conjunto de **dispositivos conectados entre si** com o o**bjetivo de compartilhar dados, recursos e informações**.
+
+### Quando foi criado as redes de computadores ?
+
+- As redes de computadores foram criadas no final da década de 1950 para uso militar e de defesa. Elas foram inicialmente usadas para transmitir dados por linhas telefônicas e tinham aplicações comerciais e científicas limitadas.
+
+### É possivel se conectar a outro computador sem usar a internet ?
+
+- Sim, é possível conectar-se a outro computador sem usar a internet. Existem várias maneiras de fazer isso, sendo eles:
+    - **Rede Local (LAN)**
+    - **Conexão Direta com Cabo Ethernet (Crossover)**
+    - **Conexão Sem Fio (Wi-Fi Direct ou Ad-Hoc)**
+    - **Bluetooth**
+
+### Se podemos nos conectar com outros computadores sem usar a internet, o que é a internet e porque utilizamos ela ?
+
+- A Internet não é de modo algum uma rede, mas sim um vasto conjunto de redes diferentes que    utilizam certos protocolos comuns e fornecem determinados serviços comuns. É um sistema pouco usual no sentido de não ter sido planejado nem ser controlado por ninguém.
+    
+    
+    A internet proporciona uma plataforma unificada e de amplo alcance para comunicação, acesso a informações, serviços, entretenimento e muito mais, transformando a forma como vivemos e trabalhamos. A infraestrutura global e os serviços oferecidos pela internet a tornam uma ferramenta indispensável na era moderna.
+    
+
+### Sabendo disso, quais diferentes tipos de rede de internet nós possuimos ?
+
+- **LAN (Local Area Network)**: Uma rede local, geralmente dentro de um único prédio ou campus, que conecta dispositivos próximos. A imagem abaixo representa uma rede LAN, em que vários dispositivos são conectados a um Switch e esse Switch é conectado a um Roteador. Na casa de vocês funciona da mesma maneira, porém, o moldem possui o roteador e o switch já embutidos, normalmente essa separação é feita em sistemas mais complexos como empresas.
+
+![Untitled](https://prod-files-secure.s3.us-west-2.amazonaws.com/eae8b1f3-dad8-4cc7-bb8b-7d233c21a622/100a98c2-6306-4f4c-aceb-22ceebb1bd0d/Untitled.png)
+
+- **MAN (Metropolitan Area Network)**: Uma rede que cobre uma área geográfica menor que uma WAN mas maior que uma LAN, como uma cidade.
+
+![Untitled](https://prod-files-secure.s3.us-west-2.amazonaws.com/eae8b1f3-dad8-4cc7-bb8b-7d233c21a622/a3374e5d-c481-43b3-8727-e442b772796f/Untitled.png)
+
+- **WAN (Wide Area Network)**: Uma rede ampla que cobre grandes distâncias, como entre cidades ou países, conectando várias LANs.
+
+![Untitled](https://prod-files-secure.s3.us-west-2.amazonaws.com/eae8b1f3-dad8-4cc7-bb8b-7d233c21a622/574cca5e-07ee-4d86-9a68-f5b785866ac2/Untitled.png)
+
+Detalhando um pouco mais é interessante saber que todo o planeta está conectado através de cabos que passam pelos oceanos ou pela terra, possibilitando assim mantermos conexões entre computadores. 
+
+Existe um termo técnico chamado de **Backbone** é a espinha dorsal da internet — a coluna ou troncal de vários pontos de conexão. Como no corpo humano, um backbone conecta e sustenta os seus membros, aqui entendidos como servidores distantes.
+
+Ou seja, você tem a internet da sua casa que está conectada a um backbone metropolitano que está conectada a um backbone global. Essas conexões com estes backbones possibilitam a criação de Lans, Mans e Wans.
+
+A grosso modo rede de computadores se assemelha e muito ao nosso tráfego de veiculos, em que sempre **saimos de uma origem para um destino** utilizando um caminho que nos conecte:
+
+- Rede Lan - ruas
+- Rede Man - avenidas
+- Rede Wan - estradas
+
+Em resumo, redes de computadores e a internet, são formas de conexão que possibilitam a comunição entre uma **origem e um destino.** Normalmente uma conexão entre um computador e um servidor.
+
+![Untitled](https://prod-files-secure.s3.us-west-2.amazonaws.com/eae8b1f3-dad8-4cc7-bb8b-7d233c21a622/c0a66584-35cb-4ecc-a836-6fb8d2da71e5/Untitled.png)
+
+### Quais são os componentes de uma rede ?
+
+- **Dispositivos**: Computadores, servidores, impressoras, etc.
+- **Meios de Transmissão**: Cabos de cobre, fibra óptica, ou conexões sem fio (Wi-Fi).
+- **Equipamentos de Rede**: Roteadores, switches, hubs, access points.
+- **Protocolos**: Conjuntos de regras que governam a comunicação na rede (por exemplo, TCP/IP, UDP, HTTP, IMCP, etc).
+
+Os equipamentos de rede e os protocolos, principalmente os protocolos de rede, são a base para todo o resto, entender como funcionam é um divisor de aguás. A respeito deste tema, seguiremos com explicações mais detalhadas no próximo capitulo. 
+
+Dessa maneira com a popularização da internet, os primeiros dispositivos começaram a se conectar e compartilhar dados. Porém isso foi um problema, já que não havia uma padronização, ou seja, se uma empresa comprasse comprasse roteadores da cisco, os switches e demais dispositivos de rede também teriam que ser da cisco, gerando assim desafios significativos na comunicação entre diferentes sistemas de computadores.
+
+Por conta disso, os protocolos de comunicação de redes de computadores foram criados para padronizar a maneira como os dispositivos se comunicam e compartilham dados, resolvendo problemas de incompatibilidade.
+
+Os protocolos de redes são nada mais nada menos do que conjuntos de regras que possibilitam a comunicação entre dispositivos em uma redecomplete observability stack that allows you to monitor and analyze metrics, logs and traces. It allows you to query, visualize, alert on and understand your data no matter where it is stored. Create, explore, and share beautiful dashboards with your team and foster a data driven culture."
+</b></details>
