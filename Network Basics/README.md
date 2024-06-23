@@ -3,7 +3,7 @@
 <details>
 <summary>Seção 1: Introdução de redes</summary><br>
 
-O que são redes de computadores?
+### O que são redes de computadores?
 
 - Trata de um conjunto de **dispositivos conectados entre si** com o o**bjetivo de compartilhar dados, recursos e informações**.
 
