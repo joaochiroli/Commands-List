@@ -1,3 +1,13 @@
+
+## Exercises
+
+| Name              | Topic  | Objective & Instructions         | Solution                                    | Comments |
+| ----------------- | ------ | -------------------------------- | ------------------------------------------- | -------- |
+| My first Commit   | Commit | [Exercise](commit_01.md)         | [Solution](solutions/commit_01_solution.md) |          |
+| Time to Branch    | Branch | [Exercise](branch_01.md)         | [Solution](solutions/branch_01_solution.md) |          |
+| Squashing Commits | Commit | [Exercise](squashing_commits.md) | [Solution](solutions/squashing_commits.md)  |          |
+
+
 # A primeira coisa que você deve fazer ao instalar Git é configurar seu nome de usuário e endereço de e-mail. Isto é importante porque cada commit usa esta informação, e ela é carimbada de forma imutável nos commits que você começa a criar:
     git config --global user.name "Fulano de Tal"
     git config --global user.email fulanodetal@exemplo.br 
