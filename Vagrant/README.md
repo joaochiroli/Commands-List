@@ -1,2 +1,2 @@
-#Check the vagrant version
-- vagrant --version
+# Check the vagrant version
+- `vagrant --version`  
