@@ -34,4 +34,7 @@
 # Envia commits locais para o repositório remoto
     git push origin main
      
+# Voltar ao Branch main
+    git checkout main
+
 
