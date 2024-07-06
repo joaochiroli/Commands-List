@@ -37,4 +37,8 @@
 # Voltar ao Branch main
     git checkout main
 
-
+# Lista branches (são bifurcações do código que criam linhas independentes de desenvolvimento) locais
+    git branch
+    
+# Git Log
+    git log
