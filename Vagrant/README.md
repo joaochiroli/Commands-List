@@ -19,11 +19,11 @@
 - `vagrant push`                  -- sim, o vagrant pode ser configurado para [deploy code](http://docs.vagrantup.com/v2/push/index.html)!
 - `vagrant up --provision | tee provision.log`  -- Runs `vagrant up`, força o provisionamento e registra todas as saídas em um arquivo
 
-# Getting into a VM
+# Entrando em uma VM 
 - `vagrant ssh`           -- connects to machine via SSH
 - `vagrant ssh <boxname>` -- If you give your box a name in your Vagrantfile, you can ssh into it with boxname. Works from any directory.
 
-# Stopping a VM
+# Parando a VM
 - `vagrant halt`        -- stops the vagrant machine
 - `vagrant suspend`     -- suspends a virtual machine (remembers state)
 
@@ -38,11 +38,11 @@
 - `vagrant box remove <name>`   -- deletes a box from the machine
 - `vagrant package`               -- packages a running virtualbox env in a reusable box
 
-# Saving Progress
+# Salvando Progresso
 -`vagrant snapshot save [options] [vm-name] <name>` -- vm-name is often `default`. Allows us to save so that we can rollback at a later time
 
 # Plugins
 - [vagrant-hostsupdater](https://github.com/cogitatio/vagrant-hostsupdater) : `$ vagrant plugin install vagrant-hostsupdater` to update your `/etc/hosts` file automatically each time you start/stop your vagrant box.
 
-# Notes
+# Notas
 - If you are using [VVV](https://github.com/varying-vagrant-vagrants/vvv/), you can enable xdebug by running `vagrant ssh` and then `xdebug_on` from the virtual machine's CLI.
