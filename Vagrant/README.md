@@ -86,7 +86,10 @@
          config.vm.define "lb_ipvsadm_#{i}" do |lb_ipvsadm|
              lb_ipvsadm.vm.box = "centos/7"
              lb_ipvsadm.vm.network "public_network", bridge: "enp8s0", ip: "192.168.0.12#{i+2}"
-             lb_ipvsadm.vm.provision "shell", path: "lb_ipvsadm.sh"
+             lb_ipvsadm.vm.provision "shell", inline: <<-SHELL
+              apt-get update
+              apt-get install -y apache2
+             SHELL
          end
       end
      end
