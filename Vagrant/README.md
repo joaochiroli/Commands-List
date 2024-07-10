@@ -45,4 +45,27 @@
 - [vagrant-hostsupdater](https://github.com/cogitatio/vagrant-hostsupdater) : `$ vagrant plugin install vagrant-hostsupdater` to update your `/etc/hosts` arquivo automaticamente cada vez que você inicia/para sua caixa vagrant.
 
 # Notas
-- If you are using [VVV](https://github.com/varying-vagrant-vagrants/vvv/),você pode ativar o xdebug executando `vagrant ssh` e então `xdebug_on` da CLI da máquina virtual.
+- Se vocês estão usando [VVV](https://github.com/varying-vagrant-vagrants/vvv/),você pode ativar o xdebug executando `vagrant ssh` e então `xdebug_on` da CLI da máquina virtual.
+
+# Config Vagrantfile
+
+    Vagrant.configure('2') do |config|
+      config.vm.define "vm1" do |vm1|
+        vm1.vm.box = "ubuntu/bionic64"
+        vm1.vm.hostname = "vm1"
+        vm1.vm.network "private_network", ip: "192.168.33.10"
+      end
+
+      config.vm.define "vm2" do |vm2|
+        vm2.vm.box = "ubuntu/bionic64"
+        vm2.vm.hostname = "vm2"
+        vm2.vm.network "private_network", ip: "192.168.33.11"
+      end
+      
+       config.vm.define "vm3" do |vm3|
+        vm3.vm.box = "ubuntu/bionic64"
+        vm3.vm.hostname = "vm3"
+        vm3.vm.network "private_network", ip: "192.168.33.12"
+      end
+
+    end
