@@ -20,14 +20,14 @@
 - `vagrant up --provision | tee provision.log`  -- Runs `vagrant up`, força o provisionamento e registra todas as saídas em um arquivo
 
 # Entrando em uma VM 
-- `vagrant ssh`           -- connects to machine via SSH
-- `vagrant ssh <boxname>` -- If you give your box a name in your Vagrantfile, you can ssh into it with boxname. Works from any directory.
+- `vagrant ssh`           -- connectando via SSH
+- `vagrant ssh <boxname>` -- Se você der um nome à sua caixa no Vagrantfile, poderá fazer ssh nela com boxname. Funciona em qualquer diretório.
 
 # Parando a VM
-- `vagrant halt`        -- stops the vagrant machine
-- `vagrant suspend`     -- suspends a virtual machine (remembers state)
+- `vagrant halt`        -- stops a vm
+- `vagrant suspend`     -- suspends a vm (lembra do estado)
 
-# Cleaning Up a VM
+# Deletando a VM
 - `vagrant destroy`     -- stops and deletes all traces of the vagrant machine
 - `vagrant destroy -f`   -- same as above, without confirmation
 
