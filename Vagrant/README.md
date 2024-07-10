@@ -39,7 +39,7 @@
 - `vagrant package`               -- empacota um ambiente de caixa virtual em execução em uma caixa reutilizável
 
 # Salvando Progresso
--`vagrant snapshot save [options] [vm-name] <name>` -- vm-name geralmente é `default`. Permite-nos salvar para que possamos reverter mais tarde
+- `vagrant snapshot save [options] [vm-name] <name>` -- vm-name geralmente é `default`. Permite-nos salvar para que possamos reverter mais tarde
 
 # Plugins
 - [vagrant-hostsupdater](https://github.com/cogitatio/vagrant-hostsupdater) : `$ vagrant plugin install vagrant-hostsupdater` to update your `/etc/hosts` arquivo automaticamente cada vez que você inicia/para sua caixa vagrant.
