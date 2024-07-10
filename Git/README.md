@@ -1,4 +1,6 @@
-### Baseado no Repo: https://github.com/bregman-arie/devops-exercises/blob/master/topics/git/README.md
+#### Baseado no Repo: https://github.com/bregman-arie/devops-exercises/blob/master/topics/git/README.md
+
+#### Youtube: https://www.youtube.com/watch?v=oc9bRgUV7hE
 
 ## Exercicios
 
