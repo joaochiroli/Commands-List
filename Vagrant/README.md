@@ -28,21 +28,21 @@
 - `vagrant suspend`     -- suspends a vm (lembra do estado)
 
 # Deletando a VM
-- `vagrant destroy`     -- stops and deletes all traces of the vagrant machine
-- `vagrant destroy -f`   -- same as above, without confirmation
+- `vagrant destroy`     -- para e apaga todos os vestígios da máquina vagabunda
+- `vagrant destroy -f`   -- igual ao anterior, sem confirmação
 
 # Boxes
-- `vagrant box list`              -- see a list of all installed boxes on your computer
-- `vagrant box add <name> <url>`  -- download a box image to your computer
-- `vagrant box outdated`          -- check for updates vagrant box update
-- `vagrant box remove <name>`   -- deletes a box from the machine
-- `vagrant package`               -- packages a running virtualbox env in a reusable box
+- `vagrant box list`              -- veja uma lista de todas as caixas instaladas no seu computador
+- `vagrant box add <name> <url>`  -- download de um box image no seu computador
+- `vagrant box outdated`          -- verifique se há atualizações atualização da caixa vagrant
+- `vagrant box remove <name>`   -- exclui uma caixa da máquina
+- `vagrant package`               -- empacota um ambiente de caixa virtual em execução em uma caixa reutilizável
 
 # Salvando Progresso
--`vagrant snapshot save [options] [vm-name] <name>` -- vm-name is often `default`. Allows us to save so that we can rollback at a later time
+-`vagrant snapshot save [options] [vm-name] <name>` -- vm-name geralmente é `default`. Permite-nos salvar para que possamos reverter mais tarde
 
 # Plugins
-- [vagrant-hostsupdater](https://github.com/cogitatio/vagrant-hostsupdater) : `$ vagrant plugin install vagrant-hostsupdater` to update your `/etc/hosts` file automatically each time you start/stop your vagrant box.
+- [vagrant-hostsupdater](https://github.com/cogitatio/vagrant-hostsupdater) : `$ vagrant plugin install vagrant-hostsupdater` to update your `/etc/hosts` arquivo automaticamente cada vez que você inicia/para sua caixa vagrant.
 
 # Notas
-- If you are using [VVV](https://github.com/varying-vagrant-vagrants/vvv/), you can enable xdebug by running `vagrant ssh` and then `xdebug_on` from the virtual machine's CLI.
+- If you are using [VVV](https://github.com/varying-vagrant-vagrants/vvv/),você pode ativar o xdebug executando `vagrant ssh` e então `xdebug_on` da CLI da máquina virtual.
