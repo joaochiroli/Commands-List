@@ -47,7 +47,7 @@
 # Notas
 - Se vocês estão usando [VVV](https://github.com/varying-vagrant-vagrants/vvv/),você pode ativar o xdebug executando `vagrant ssh` e então `xdebug_on` da CLI da máquina virtual.
 
-# Config Vagrantfile
+# Config Vagrantfile Exemplo 1 
 
     Vagrant.configure('2') do |config|
       config.vm.define "vm1" do |vm1|
@@ -69,7 +69,23 @@
        end
     end
 
+# Config Vagrantfile Exemplo 2 
 
+    Vagrant.configure("2") do |config|
+  config.vm.define "vm1" do |vm1|
+    vm1.vm.box = "ubuntu/trusty64"
+#    vm1.vm.network "private_network", ip: "192.168.15.8"
+    vm1.vm.network "public_network", bridge: "wlp3s0", ip: "192.168.15.8"
+    vm1.vm.provider "virtualbox" do |vb|
+      vb.memory = "1024"
+      vb.name = "vm1"
+    end
+#  vm1.vm.provision "shell", inline: <<-SHELL
+#      apt-get update
+#      apt-get install -y apache2
+#    SHELL
+  end
+end
 
 # Config Vagrantfile Loop
 
