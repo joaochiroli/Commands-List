@@ -87,7 +87,7 @@
       end
     end
 
-# Config Vagrantfile Loop
+# Config Vagrantfile Loop Exemplo 1 
 
     Vagrant.configure("2") do |config|
       (1..2).each do |i|
@@ -107,5 +107,23 @@
               apt-get install -y apache2
              SHELL
          end
+      end
+     end
+
+
+# Config Vagrantfile Loop Exemplo 2
+
+     Vagrant.configure("2") do |config|
+      (1..3).each do |i|
+          config.vm.define "server#{i}" do |server|
+              server.vm.box = "ubuntu/jammy64"
+              server.vm.network "public_network", bridge: "wlp3s0", ip: "192.168.15.12#{i}"
+              server.vm.disk :disk, size: "100GB", primary: true
+            server.vm.provider "virtualbox" do |vb|
+              vb.memory = "2048"
+              vb.name = "server#{i}"
+            end
+             server.vm.provision "shell", path: "script#{i}.sh", privileged: true
+          end
       end
      end
