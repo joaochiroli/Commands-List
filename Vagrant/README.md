@@ -4,9 +4,9 @@
 
 
 # Iniciar a VM
-- `vagrant up`                  -- inicia ambiente vagabundo (também disposições apenas no PRIMEIRO vagabundo)
+- `vagrant up`                  -- inicia ambiente (também disposições apenas no PRIMEIRO)
 - `vagrant resume`              -- retomar uma máquina suspensa (vagrant up também funciona bem para isso)
-- `vagrant provision`           -- força o reprovisionamento da máquina vagabunda
+- `vagrant provision`           -- força o reprovisionamento da máquina 
 - `vagrant reload`              -- reinicia a máquina vagrant, carrega a nova configuração do Vagrantfile
 - `vagrant reload --provision`  -- reinicie a máquina virtual e force o provisionamento
 
@@ -28,7 +28,7 @@
 - `vagrant suspend`     -- suspends a vm (lembra do estado)
 
 # Deletando a VM
-- `vagrant destroy`     -- para e apaga todos os vestígios da máquina vagabunda
+- `vagrant destroy`     -- para e apaga todos os vestígios da máquina
 - `vagrant destroy -f`   -- igual ao anterior, sem confirmação
 
 # Boxes
