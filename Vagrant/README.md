@@ -4,11 +4,7 @@
 
 
 # Iniciar a VM
-<<<<<<< HEAD
 - `vagrant up`                  -- inicia ambiente (também disposições apenas no PRIMEIRO)
-=======
-- `vagrant up`                  -- inicia ambiente  (também disposições apenas no PRIMEIRO)
->>>>>>> e9ff1ee11fb5f03f6501a179f5d4cf489868f268
 - `vagrant resume`              -- retomar uma máquina suspensa (vagrant up também funciona bem para isso)
 - `vagrant provision`           -- força o reprovisionamento da máquina 
 - `vagrant reload`              -- reinicia a máquina vagrant, carrega a nova configuração do Vagrantfile
