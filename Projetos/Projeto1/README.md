@@ -80,8 +80,9 @@ Primeira coisa a se fazer é subir o Vagrant usando o arquivo Vagrantfile e seus
 
 
 
-# Conectar a VM e começar a configurar o Zabbix Server
+# Conectar a VM Zabbix Server e começar a configurar
 
+1. Conectar a VM e começar a configurar o Zabbix Server
         vagrant ssh vm1
         sudo su
         apt-get update
@@ -90,32 +91,32 @@ Primeira coisa a se fazer é subir o Vagrant usando o arquivo Vagrantfile e seus
         export LC_ALL=en_US.UTF-8
 
 
-1. Instalando ferramenta client do DB para testar conexão remota 
+2. Instalando ferramenta client do DB para testar conexão remota 
 
 
         sudo apt-get install postgresql-client
         psql -h 192.168.15.9 -U zabbix_server -d zabbix -W
 
 
-2. Instalando pacotes do Zabbix Server e pacotes das tabelas do DB
+3. Instalando pacotes do Zabbix Server e pacotes das tabelas do DB
 
 
         apt install zabbix-server-pgsql zabbix-sql-scripts zabbix-agent
 
 
-3. Preenchendo a Base de Dados com as tabelas do Zabbix Server
+4. Preenchendo a Base de Dados com as tabelas do Zabbix Server
 
 
         zcat /usr/share/zabbix-sql-scripts/postgresql/server.sql.gz | psql -h 192.168.15.9 -U zabbix -d zabbix
 
 
-4. Preenchendo a Base de Dados com as tabelas do Zabbix Server
+5. Preenchendo a Base de Dados com as tabelas do Zabbix Server
         vi /etc/zabbix/zabbix_server.conf
             DBPassword=password
             DBHost=<ip do host que ta o db>
 
 
-5. Comandos finais
+6. Comandos finais
 
 
         systemctl start zabbix-server   
