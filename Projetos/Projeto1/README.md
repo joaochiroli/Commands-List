@@ -29,10 +29,10 @@ Primeira coisa a se fazer é subir o Vagrant usando o arquivo Vagrantfile e seus
 
 1. Conectar a VM e começar a configurar o DB
 
-    vagrant ssh vm2
-    export LANGUAGE=en_US.UTF-8
-    export LANG=en_US.UTF-8
-    export LC_ALL=en_US.UTF-8
+        vagrant ssh vm2
+        export LANGUAGE=en_US.UTF-8
+        export LANG=en_US.UTF-8
+        export LC_ALL=en_US.UTF-8
 
 Instalando DB PostgreSQL  
     
