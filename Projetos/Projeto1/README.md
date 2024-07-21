@@ -19,10 +19,10 @@ Subir um ambiente de monitoramento usando Zabbix em 3 camadas (Zabbix Server, DB
 
 # Subir as VMS
 
-Primeira coisa a se fazer é subir o Vagrant usando o arquivo Vagrantfile e seus scripts para subir as vms que serão utilizadas
+1. Primeira coisa a se fazer é subir o Vagrant usando o arquivo Vagrantfile e seus scripts para subir as vms que serão utilizadas
 
 
-    vagrant up 
+        vagrant up 
     
 
 # Conectar a VM DB e configurar PostgreSQL
