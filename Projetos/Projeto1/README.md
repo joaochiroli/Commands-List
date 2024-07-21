@@ -59,7 +59,7 @@ Primeira coisa a se fazer é subir o Vagrant usando o arquivo Vagrantfile e seus
             listen_addresses = '*'
 
 
-5. Caso queira acessar o Banco e realizar alguns comandos
+5. Caso queira acessar o Banco e realizar alguns comandos (Opcional)
 
         Acesse o prompt do PostgreSQL como o usuário postgres
             sudo -u postgres psql
@@ -82,25 +82,49 @@ Primeira coisa a se fazer é subir o Vagrant usando o arquivo Vagrantfile e seus
 
 # Conectar a VM e começar a configurar o Zabbix Server
 
-    vagrant ssh vm1
-    sudo su
-    apt-get update
-    export LANGUAGE=en_US.UTF-8
-    export LANG=en_US.UTF-8
-    export LC_ALL=en_US.UTF-8
-    sudo apt-get install postgresql-client
-    psql -h 192.168.15.9 -U zabbix_server -d zabbix -W
-    apt install zabbix-server-pgsql zabbix-sql-scripts zabbix-agent
-    zcat /usr/share/zabbix-sql-scripts/postgresql/server.sql.gz | psql -h 192.168.15.9 -U zabbix -d zabbix
-    vi /etc/zabbix/zabbix_server.conf
-    systemctl start zabbix-server   
-    systemctl enable zabbix-server
+        vagrant ssh vm1
+        sudo su
+        apt-get update
+        export LANGUAGE=en_US.UTF-8
+        export LANG=en_US.UTF-8
+        export LC_ALL=en_US.UTF-8
 
-    apt install zabbix-agent -y
 
-    systemctl start zabbix-agent 
+1. Instalando ferramenta client do DB para testar conexão remota 
 
-    systemctl enable zabbix-agent
+
+        sudo apt-get install postgresql-client
+        psql -h 192.168.15.9 -U zabbix_server -d zabbix -W
+
+
+2. Instalando pacotes do Zabbix Server e pacotes das tabelas do DB
+
+
+        apt install zabbix-server-pgsql zabbix-sql-scripts zabbix-agent
+
+
+3. Preenchendo a Base de Dados com as tabelas do Zabbix Server
+
+
+        zcat /usr/share/zabbix-sql-scripts/postgresql/server.sql.gz | psql -h 192.168.15.9 -U zabbix -d zabbix
+
+
+4. Preenchendo a Base de Dados com as tabelas do Zabbix Server
+        vi /etc/zabbix/zabbix_server.conf
+            DBPassword=password
+            DBHost=<ip do host que ta o db>
+
+
+5. Comandos finais
+
+
+        systemctl start zabbix-server   
+        systemctl enable zabbix-server
+        apt install zabbix-agent -y
+        systemctl start zabbix-agent 
+        systemctl enable zabbix-agent
+
+
 
 # Conectar a VM e começar a configurar a WEB
 
@@ -121,6 +145,9 @@ Primeira coisa a se fazer é subir o Vagrant usando o arquivo Vagrantfile e seus
     vi /etc/php/8.2/fpm/php.ini
         date.timezone = America/Sao_Paulo
     
+
+    systemctl start nginx php8.2-fpm
+    systemctl enable nginx php8.2-fpm
     apt install zabbix-agent -y
 
     systemctl start zabbix-agent 
