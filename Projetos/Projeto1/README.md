@@ -135,36 +135,36 @@ Subir um ambiente de monitoramento usando Zabbix em 3 camadas (Zabbix Server, DB
 1. Conectar a VM e começar a configurar o servidor Web
 
 
-    vagrant ssh m3
-    sudo su
-    apt-get update
-    apt install 
-    export LANGUAGE=en_US.UTF-8
-    export LANG=en_US.UTF-8
-    export LC_ALL=en_US.UTF-8
+        vagrant ssh m3
+        sudo su
+        apt-get update
+        apt install 
+        export LANGUAGE=en_US.UTF-8
+        export LANG=en_US.UTF-8
+        export LC_ALL=en_US.UTF-8
 
 
 2. Instalando binários do Zabbix para utilizar a parte WEB
 
 
-    wget https://repo.zabbix.com/zabbix/7.0/debian/pool/main/z/zabbix-release/zabbix-release_7.0-2+debian12_all.deb
-    apt update
-    dpkg -i zabbix-release_7.0-2+debian12_all.deb
-    apt install zabbix-frontend-php php8.2-pgsql zabbix-nginx-conf
-    vi etc/zabbix/nginx.conf
-        # listen 80;
-        # server_name 192.168.15.10; 
-    vi /etc/php/8.2/fpm/php.ini
-        date.timezone = America/Sao_Paulo
+        wget https://repo.zabbix.com/zabbix/7.0/debian/pool/main/z/zabbix-release/zabbix-release_7.0-2+debian12_all.deb
+        apt update
+        dpkg -i zabbix-release_7.0-2+debian12_all.deb
+        apt install zabbix-frontend-php php8.2-pgsql zabbix-nginx-conf
+        vi etc/zabbix/nginx.conf
+            # listen 80;
+            # server_name 192.168.15.10; 
+        vi /etc/php/8.2/fpm/php.ini
+            date.timezone = America/Sao_Paulo
     
 3. Comandos finais
 
 
-    systemctl start nginx php8.2-fpm
-    systemctl enable nginx php8.2-fpm
-    apt install zabbix-agent -y
-    systemctl start zabbix-agent 
-    systemctl enable zabbix-agent
+        systemctl start nginx php8.2-fpm
+        systemctl enable nginx php8.2-fpm
+        apt install zabbix-agent -y
+        systemctl start zabbix-agent 
+        systemctl enable zabbix-agent
 
 
 
