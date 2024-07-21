@@ -34,49 +34,49 @@ Primeira coisa a se fazer é subir o Vagrant usando o arquivo Vagrantfile e seus
         export LANG=en_US.UTF-8
         export LC_ALL=en_US.UTF-8
 
-Instalando DB PostgreSQL  
+2. Instalando DB PostgreSQL  
     
-    apt-cache madison postgresql
-    sudo sh -c 'echo "deb http://apt.postgresql.org/pub/repos/apt $(lsb_release -cs)-pgdg main" > /etc/apt/sources.list.d/pgdg.list'
-    curl -fsSL https://www.postgresql.org/media/keys/ACCC4CF8.asc | sudo gpg --dearmor -o /etc/apt/trusted.gpg.d/postgresql.gp
-    sudo apt install postgresql-16 postgresql-contrib-16
-    sudo systemctl enable postgresql.service
-    sudo systemctl start postgresql.servic
+        apt-cache madison postgresql
+        sudo sh -c 'echo "deb http://apt.postgresql.org/pub/repos/apt $(lsb_release -cs)-pgdg main" > /etc/apt/sources.list.d/pgdg.list'
+        curl -fsSL https://www.postgresql.org/media/keys/ACCC4CF8.asc | sudo gpg --dearmor -o /etc/apt/trusted.gpg.d/postgresql.gp
+        sudo apt install postgresql-16 postgresql-contrib-16
+        sudo systemctl enable postgresql.service
+        sudo systemctl start postgresql.servic
 
 
-Criando usuário e Base de Dados
+3. Criando usuário e Base de Dados
 
-    sudo -u postgres createuser --pwprompt zabbix
-    sudo -u postgres createdb -O zabbix -E Unicode -T template0 zabbix
-
-
-Liberações de Network para acesso a DB 
-
-    vi /etc/postgresql/16/main/pg_hba.conf  
-        host    all             all             0.0.0.0/0               md5
-        host    all             all             ::1/128                 md5
-    vi /etc/postgresql/16/main/postgresql.conf
-        listen_addresses = '*'
+        sudo -u postgres createuser --pwprompt zabbix
+        sudo -u postgres createdb -O zabbix -E Unicode -T template0 zabbix
 
 
-Caso queira acessar o Banco e realizar alguns comandos
+4. Liberações de Network para acesso a DB 
 
-    Acesse o prompt do PostgreSQL como o usuário postgres
-        sudo -u postgres psql
-    Dentro do prompt do PostgreSQL, conecte-se ao banco de dados zabbix
-        \c zabbix
-    Listar todas as tabelas do banco de dados zabbix
-        \dt    
-    Listar todas os usuarios do banco de dados zabbix
-        \du
+        vi /etc/postgresql/16/main/pg_hba.conf  
+            host    all             all             0.0.0.0/0               md5
+            host    all             all             ::1/128                 md5
+        vi /etc/postgresql/16/main/postgresql.conf
+            listen_addresses = '*'
 
 
-Comandos finais dessa etapa
+5. Caso queira acessar o Banco e realizar alguns comandos
 
-    systemctl restart postgresql
-    apt install zabbix-agent -y
-    systemctl start zabbix-agent 
-    systemctl enable zabbix-agent 
+        Acesse o prompt do PostgreSQL como o usuário postgres
+            sudo -u postgres psql
+        Dentro do prompt do PostgreSQL, conecte-se ao banco de dados zabbix
+            \c zabbix
+        Listar todas as tabelas do banco de dados zabbix
+            \dt    
+        Listar todas os usuarios do banco de dados zabbix
+            \du
+
+
+6. Comandos finais dessa etapa
+
+        systemctl restart postgresql
+        apt install zabbix-agent -y
+        systemctl start zabbix-agent 
+        systemctl enable zabbix-agent 
 
 
 
