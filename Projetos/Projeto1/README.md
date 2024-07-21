@@ -83,6 +83,8 @@ Subir um ambiente de monitoramento usando Zabbix em 3 camadas (Zabbix Server, DB
 # Conectar a VM Zabbix Server e começar a configurar
 
 1. Conectar a VM e começar a configurar o Zabbix Server
+
+
         vagrant ssh vm1
         sudo su
         apt-get update
@@ -114,6 +116,8 @@ Subir um ambiente de monitoramento usando Zabbix em 3 camadas (Zabbix Server, DB
 
 
 5. Preenchendo a Base de Dados com as tabelas do Zabbix Server
+
+
         vi /etc/zabbix/zabbix_server.conf
             DBPassword=password
             DBHost=<ip do host que ta o db>
