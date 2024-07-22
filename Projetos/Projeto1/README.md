@@ -389,18 +389,18 @@ Subir um ambiente de monitoramento usando Zabbix em 3 camadas (Zabbix Server, DB
         sudo nano /etc/apache2/sites-available/glpi.conf
 
         <VirtualHost *:80>
-            ServerAdmin admin@example.com
-            DocumentRoot /var/www/html/glpi
-            ServerName example.com
+                ServerAdmin admin@example.com
+                DocumentRoot /var/www/html/glpi
+                ServerName example.com
 
-            ErrorLog ${APACHE_LOG_DIR}/error.log
-            CustomLog ${APACHE_LOG_DIR}/access.log combined
+                ErrorLog ${APACHE_LOG_DIR}/error.log
+                CustomLog ${APACHE_LOG_DIR}/access.log combined
 
-            <Directory /var/www/html/glpi>
-                Options FollowSymLinks
-                AllowOverride All
-                Require all granted
-            </Directory>
+                <Directory /var/www/html/glpi>
+                    Options FollowSymLinks
+                    AllowOverride All
+                    Require all granted
+                </Directory>
         </VirtualHost>
 
 
