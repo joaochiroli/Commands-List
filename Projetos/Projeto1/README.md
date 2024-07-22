@@ -199,56 +199,81 @@ Subir um ambiente de monitoramento usando Zabbix em 3 camadas (Zabbix Server, DB
 
         echo "CREATE EXTENSION IF NOT EXISTS timescaledb CASCADE;" | sudo -u postgres psql zabbix
 
+
+3. Editando configurações 
+
+
         vi /etc/postgresql/16/main/postgresql.conf
             max_connections = 200
             superuser_reserved_connections = 10
-    
         sudo systemctl restart postgresql
     
 
+
 # Conectar ao Zabbix Server
 
-    cat /usr/share/zabbix-sql-scripts/postgresql/timescaledb/schema.sql | psql -h 192.168.15.9 -U zabbix -d zabbix
 
-    systemctl start zabbi-server
+1. Populando Timescaledb e dando start no Zabbix Server 
+
+
+        cat /usr/share/zabbix-sql-scripts/postgresql/timescaledb/schema.sql | psql -h 192.168.15.9 -U zabbix -d zabbix
+        systemctl start zabbi-server
+
 
 
 # GRAFANA 
 
-    sudo apt-get install -y apt-transport-https software-properties-common wget
+    
+1. Instalando pacotes
 
-    sudo mkdir -p /etc/apt/keyrings/
 
-    wget -q -O - https://apt.grafana.com/gpg.key | gpg --dearmor | sudo tee /etc/apt/keyrings/grafana.gpg > /dev/null
 
-    echo "deb [signed-by=/etc/apt/keyrings/grafana.gpg] https://apt.grafana.com stable main" | sudo tee -a /etc/apt/sources.list.d/grafana.list
+        sudo apt-get install -y apt-transport-https software-properties-common wget
+        sudo mkdir -p /etc/apt/keyrings/
+        wget -q -O - https://apt.grafana.com/gpg.key | gpg --dearmor | sudo tee /etc/apt/keyrings/grafana.gpg > /dev/null
+        echo "deb [signed-by=/etc/apt/keyrings/grafana.gpg] https://apt.grafana.com stable main" | sudo tee -a /etc/apt/sources.list.d/grafana.list
+    
+2. Iniciando programas    
 
-    sudo apt-get update
 
-    sudo apt-get install grafana
+        sudo apt-get update
+        sudo apt-get install grafana
+        systemctl enable grafana-server
+        systemctl start grafana-server
+        apt install zabbix-agent -y
+        systemctl start zabbix-agent 
+        systemctl enable zabbix-agent
 
-    systemctl enable grafana-server
 
-    systemctl start grafana-server
+3. Conectando na página Web 
 
-    Ir até a http://192.168.15.11:3000/ logar com user admin e senha admin 
-    Ir até a aba Plugins, instalar e habilitar puglin Zabbix 
 
-    apt install zabbix-agent -y
+        Ir até a http://192.168.15.11:3000/ logar com user admin e senha admin 
+        Ir até a aba Plugins, instalar e habilitar plugin Zabbix 
 
-    systemctl start zabbix-agent 
 
-    systemctl enable zabbix-agent
 
 # Editar o arquivo de Configuração de todos os Zabbix Agents de todas as vms
-    vi /etc/zabbix/zabbix_agentd.conf
-        Server=<ipdozabbixserver>
-        apagar parametros Hostname e ServerActive
-    systemctl restart zabbix-agent
+
+
+1. Editando o arquivo de configuração do Zabbix Server e iniciando o arquivo 
+
+        vi /etc/zabbix/zabbix_agentd.conf
+            Server=<ipdozabbixserver>
+            apagar parametros Hostname e ServerActive
+        systemctl restart zabbix-agent
+
+
 
 # Usando Integração com API e Postman para criar hosts 
 
-    ### Usar o comando abaixo para retornar o token de autenticação 
+1. Usar o comando abaixo para retornar o token de autenticação 
+
+
+
+
+
+
         {
     "jsonrpc": "2.0",
     "method": "user.login",
@@ -314,7 +339,13 @@ Subir um ambiente de monitoramento usando Zabbix em 3 camadas (Zabbix Server, DB
     "id": 1
 }
 
+
+
 # Integrando Grafana e Zabbix 
+
+
+1. Integrando as ferramentas
+
 
     Criar um user no Zabbix com permissão para integrar com o Grafana
     Colocar as informações de URL, user e password
