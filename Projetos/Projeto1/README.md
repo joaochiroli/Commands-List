@@ -270,74 +270,76 @@ Subir um ambiente de monitoramento usando Zabbix em 3 camadas (Zabbix Server, DB
 1. Usar o comando abaixo para retornar o token de autenticação 
 
 
+        {
+            "jsonrpc": "2.0",
+            "method": "host.get",
+            "params": {
+                "output": "extend"
+            },
+            "auth": "09908de562e8c5231fda8999cc1ab2c3",
+            "id": 1
+        }
 
 
+
+2. Usar o comando abaixo para saber qual o ID do template que iremos utilizar 
 
 
         {
-    "jsonrpc": "2.0",
-    "method": "user.login",
-    "params": {
-        "username": "Admin",
-        "password": "zabbix"
-    },
-    "id": 1,
-    "auth": null
-}
+            "jsonrpc": "2.0",
+            "method": "template.get",
+            "params": {
+                "output": ["name","templateid"]
+            },
+            "auth": "09908de562e8c5231fda8999cc1ab2c3",
+            "id": 1
+        }
 
-    ### Usar o comando abaixo para saber qual o ID do template que iremos utilizar 
-    
-    {
-    "jsonrpc": "2.0",
-    "method": "template.get",
-    "params": {
-        "output": ["name","templateid"]
-    },
-    "auth": "09908de562e8c5231fda8999cc1ab2c3",
-    "id": 1
-}
 
-    ### Usar o comando abaixo para saber qual o ID do grupo que iremos utilizar  
+3. Usar o comando abaixo para saber qual o ID do grupo que iremos utilizar  
 
-    {
-    "jsonrpc": "2.0",
-    "method": "hostgroup.get",
-    "params": {
-        "output": ["name","groupid"]
-    },
-    "auth": "6eb64c4af84e022c162b3194c10cb052",
-    "id": 1
-}
 
-{
-    "jsonrpc": "2.0",
-    "method": "host.create",
-    "params": {
-        "host": "Grafana",
-        "groups": [
-            {
-                "groupid": "2"
-            }
-        ],
-        "interfaces": [
-            {
-                "type": "1",
-                "main": "1",
-                "useip": "1",
-                "ip": "192.168.15.9",
-                "dns": "",
-                "port": "10050"
-            }
-        ],
-        "templates": [
-            {
-                "templateid": "10001"
-            }
-        ]
-    },
-    "auth": "2940c2d542bfb846a6083a4779e93941",
-    "id": 1
-}
+        {
+            "jsonrpc": "2.0",
+            "method": "hostgroup.get",
+            "params": {
+                "output": ["name","groupid"]
+            },
+            "auth": "6eb64c4af84e022c162b3194c10cb052",
+            "id": 1
+        }       
+
+4. Criar host completo
+
+        {
+            "jsonrpc": "2.0",
+            "method": "host.create",
+            "params": {
+                "host": "Grafana",
+                "groups": [
+                    {
+                        "groupid": "2"
+                    }
+                ],
+                "interfaces": [
+                    {
+                        "type": "1",
+                        "main": "1",
+                        "useip": "1",
+                        "ip": "192.168.15.9",
+                        "dns": "",
+                        "port": "10050"
+                    }
+                ],
+                "templates": [
+                    {
+                        "templateid": "10001"
+                    }
+                ]
+            },
+            "auth": "2940c2d542bfb846a6083a4779e93941",
+            "id": 1
+        }
 
 
 
@@ -386,20 +388,20 @@ Subir um ambiente de monitoramento usando Zabbix em 3 camadas (Zabbix Server, DB
 
         sudo nano /etc/apache2/sites-available/glpi.conf
 
-            <VirtualHost *:80>
-    ServerAdmin admin@example.com
-    DocumentRoot /var/www/html/glpi
-    ServerName example.com
+        <VirtualHost *:80>
+            ServerAdmin admin@example.com
+            DocumentRoot /var/www/html/glpi
+            ServerName example.com
 
-    ErrorLog ${APACHE_LOG_DIR}/error.log
-    CustomLog ${APACHE_LOG_DIR}/access.log combined
+            ErrorLog ${APACHE_LOG_DIR}/error.log
+            CustomLog ${APACHE_LOG_DIR}/access.log combined
 
-    <Directory /var/www/html/glpi>
-        Options FollowSymLinks
-        AllowOverride All
-        Require all granted
-    </Directory>
-</VirtualHost>
+            <Directory /var/www/html/glpi>
+                Options FollowSymLinks
+                AllowOverride All
+                Require all granted
+            </Directory>
+        </VirtualHost>
 
 
 5. Configurando serviços 
