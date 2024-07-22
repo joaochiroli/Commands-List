@@ -14,6 +14,7 @@ Subir um ambiente de monitoramento usando Zabbix em 3 camadas (Zabbix Server, DB
 6. **PostgreSQL**
 7. **Nginx**  
 8. **GLPI** 
+9. **GitHub** 
 
 
 
