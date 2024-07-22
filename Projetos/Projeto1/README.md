@@ -174,28 +174,36 @@ Subir um ambiente de monitoramento usando Zabbix em 3 camadas (Zabbix Server, DB
 
 # Conectar ao Zabbix Server
 
-    systemctl stop zabbix-server
+1. Parar serviço do Zabbix Server
+
+    
+        systemctl stop zabbix-server
    
+
 # Conectar ao DB para habilitar o Timescaledb
 
-    echo "deb https://packagecloud.io/timescale/timescaledb/debian/ $(lsb_release -c -s) main" | sudo tee /etc/apt/sources.list.d/timescaledb.list
 
-    wget --quiet -O - https://packagecloud.io/timescale/timescaledb/gpgkey | sudo gpg --dearmor -o /etc/apt/trusted.gpg.d/timescaledb.gpg
-    sudo apt update
+1. Instalar binários do Timescaledb
 
-    sudo apt install timescaledb-2-postgresql-16=2.13.1~debian12 timescaledb-2-loader-postgresql-16=2.13.1~debian12
 
-    sudo timescaledb-tune
+        echo "deb https://packagecloud.io/timescale/timescaledb/debian/ $(lsb_release -c -s) main" | sudo tee /etc/apt/sources.list.d/timescaledb.list
+        wget --quiet -O - https://packagecloud.io/timescale/timescaledb/gpgkey | sudo gpg --dearmor -o /etc/apt/trusted.gpg.d/timescaledb.gpg
+        sudo apt update
+        sudo apt install timescaledb-2-postgresql-16=2.13.1~debian12 timescaledb-2-loader-postgresql-16=2.13.1~debian12
+        sudo timescaledb-tune
+        sudo systemctl restart postgresql
 
-    sudo systemctl restart postgresql
 
-    echo "CREATE EXTENSION IF NOT EXISTS timescaledb CASCADE;" | sudo -u postgres psql zabbix
+2. Criando extensão 
 
-    vi /etc/postgresql/16/main/postgresql.conf
-        max_connections = 200
-        superuser_reserved_connections = 10
+
+        echo "CREATE EXTENSION IF NOT EXISTS timescaledb CASCADE;" | sudo -u postgres psql zabbix
+
+        vi /etc/postgresql/16/main/postgresql.conf
+            max_connections = 200
+            superuser_reserved_connections = 10
     
-    sudo systemctl restart postgresql
+        sudo systemctl restart postgresql
     
 
 # Conectar ao Zabbix Server
