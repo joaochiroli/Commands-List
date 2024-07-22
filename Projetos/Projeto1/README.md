@@ -155,11 +155,9 @@ Subir um ambiente de monitoramento usando Zabbix em 3 camadas (Zabbix Server, DB
         apt update
         dpkg -i zabbix-release_7.0-2+debian12_all.deb
         apt install zabbix-frontend-php php8.2-pgsql zabbix-nginx-conf
-
         vi etc/zabbix/nginx.conf
             # listen 80;
             # server_name 192.168.15.10; 
-            
         vi /etc/php/8.2/fpm/php.ini
             date.timezone = America/Sao_Paulo
     
@@ -349,36 +347,46 @@ Subir um ambiente de monitoramento usando Zabbix em 3 camadas (Zabbix Server, DB
 1. Integrando as ferramentas
 
 
-    Criar um user no Zabbix com permissão para integrar com o Grafana
-    Colocar as informações de URL, user e password
-        http://192.168.15.10/api_jsonrpc.php
+        Criar um user no Zabbix com permissão para integrar com o Grafana
+        Colocar as informações de URL, user e password
+            http://192.168.15.10/api_jsonrpc.php
 
 
 
 
 # GLPI
 
-    sudo apt update
-    sudo apt install -y apache2 mariadb-server php php-mysql libapache2-mod-php php-gd php-ldap php-xml php-mbstring php-curl php-json php-intl
-
-    sudo mysql -u root -p
-    CREATE DATABASE glpidb CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;
-    CREATE USER 'glpiuser'@'localhost' IDENTIFIED BY 'password';
-    GRANT ALL PRIVILEGES ON glpidb.* TO 'glpiuser'@'localhost';
-    FLUSH PRIVILEGES;
-    EXIT;
-
-    wget https://github.com/glpi-project/glpi/releases/download/10.0.16/glpi-10.0.16.tgz
-    tar -xzf glpi-10.0.16.tgz
-
-    sudo mv glpi /var/www/html/
-    
-    sudo chown -R www-data:www-data /var/www/html/glpi
-    sudo chmod -R 755 /var/www/html/glpi
+1. Instalando pacotes
 
 
-    sudo nano /etc/apache2/sites-available/glpi.conf
-        <VirtualHost *:80>
+        sudo apt update
+        sudo apt install -y apache2 mariadb-server php php-mysql libapache2-mod-php php-gd php-ldap php-xml php-mbstring php-curl php-json php-intl
+
+
+2. Configurando DB
+
+
+        sudo mysql -u root -p
+        CREATE DATABASE glpidb CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;
+        CREATE USER 'glpiuser'@'localhost' IDENTIFIED BY 'password';
+        GRANT ALL PRIVILEGES ON glpidb.* TO 'glpiuser'@'localhost';
+        FLUSH PRIVILEGES;
+        EXIT;
+
+3. Instalando binários e dando permissões as pastas
+
+        wget https://github.com/glpi-project/glpi/releases/download/10.0.16/glpi-10.0.16.tgz
+        tar -xzf glpi-10.0.16.tgz
+        sudo mv glpi /var/www/html/
+        sudo chown -R www-data:www-data /var/www/html/glpi
+        sudo chmod -R 755 /var/www/html/glpi
+
+
+4. Configurações Web
+
+        sudo nano /etc/apache2/sites-available/glpi.conf
+
+            <VirtualHost *:80>
     ServerAdmin admin@example.com
     DocumentRoot /var/www/html/glpi
     ServerName example.com
@@ -393,15 +401,20 @@ Subir um ambiente de monitoramento usando Zabbix em 3 camadas (Zabbix Server, DB
     </Directory>
 </VirtualHost>
 
-sudo a2ensite glpi.conf
-sudo systemctl restart apache2
+
+5. Configurando serviços 
 
 
-Para integrar com o Zabbix precisar criar o token para o usuario glpi
-Ir em configurações geral e habilitar api e atutenticação 
-Criar usuário
 
-{EVENT.SOURCE}
+        sudo a2ensite glpi.conf
+        sudo systemctl restart apache2
 
 
-GQ31rTPUsRBckdR7sVkUPqHArF60R8OAZualT9Ef
+
+6. Configurações Finais
+
+
+        Para integrar com o Zabbix precisar criar o token para o usuario glpi
+        Ir em configurações geral e habilitar api e atutenticação 
+        Criar usuário
+
