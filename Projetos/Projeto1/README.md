@@ -1,3 +1,5 @@
+<p align="center"><img src="Projeto1.jpg"/></p>
+
 # Project Overview
 
 ## Objetivo
