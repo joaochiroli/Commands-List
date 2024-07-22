@@ -155,9 +155,11 @@ Subir um ambiente de monitoramento usando Zabbix em 3 camadas (Zabbix Server, DB
         apt update
         dpkg -i zabbix-release_7.0-2+debian12_all.deb
         apt install zabbix-frontend-php php8.2-pgsql zabbix-nginx-conf
+
         vi etc/zabbix/nginx.conf
             # listen 80;
             # server_name 192.168.15.10; 
+            
         vi /etc/php/8.2/fpm/php.ini
             date.timezone = America/Sao_Paulo
     
