@@ -221,7 +221,7 @@ Subir um ambiente de monitoramento usando Zabbix em 3 camadas (Zabbix Server, DB
 
 
 
-# GRAFANA 
+# Grafana 
 
     
 1. Instalando pacotes
