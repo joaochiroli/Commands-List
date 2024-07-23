@@ -67,3 +67,6 @@
 
 ### Git tem basicamente 3 estados 
     Working / Staging / Commit
+
+### Restaurar arquivo 
+    git restore <estado> <arquivo>
