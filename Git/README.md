@@ -81,3 +81,6 @@
 
 ### Voltar um estado da configuração 
     git reset --hard <id>
+
+### Criar um atalho no Git
+![image](https://github.com/user-attachments/assets/449d8bef-2b3a-4f58-8235-aa9d228258cf)
