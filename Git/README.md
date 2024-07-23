@@ -101,3 +101,6 @@
 
 ### Passar o conteudo de uma branch para a main 
     git merge -m "teste" ADDMENU
+
+### Remover Branch
+    git branch -d ADDMENU
