@@ -64,3 +64,6 @@
 
 ### Fazendo o commit junto com o add 
     git commit  -a -m "Commit"
+
+### Git tem basicamente 3 estados 
+    Working / Staging / Commit
