@@ -84,3 +84,6 @@
 
 ### Criar um atalho no Git
 ![image](https://github.com/user-attachments/assets/449d8bef-2b3a-4f58-8235-aa9d228258cf)
+
+### Boas práticas
+    Nunca trabalhar em cima da branch main 
