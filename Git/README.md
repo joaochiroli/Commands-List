@@ -61,3 +61,6 @@
 
 ### Me trazer delog de modo resumido  
     git log --online
+
+### Fazendo o commit junto com o add 
+    git commit  -a -m "Commit"
