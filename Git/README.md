@@ -98,3 +98,6 @@
 
 ### Mudar a branch 
     git switch <nome da branch>
+
+### Passar o conteudo de uma branch para a main 
+    git merge -m "teste" ADDMENU
