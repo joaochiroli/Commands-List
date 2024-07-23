@@ -89,3 +89,10 @@
     Nunca trabalhar em cima da branch main 
 
 ![image](https://github.com/user-attachments/assets/efda13de-4414-4422-8e51-21602b5ad1ce)
+
+### Checar a branch 
+    git branch
+
+### Criar branch 
+    git branch ADDMENU
+
