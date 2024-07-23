@@ -78,3 +78,6 @@
     git commit  -m "Commit" --amend
 
 ![image](https://github.com/user-attachments/assets/ea29b64f-c199-4060-9230-57ee45f760ae)
+
+### Voltar um estado da configuração 
+    git reset --hard <id>
