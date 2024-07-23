@@ -58,3 +58,6 @@
 
 ### Me trazer as informações do que foi alterado 
     git diff
+
+### Me trazer delog de modo resumido  
+    git log --online
