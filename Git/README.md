@@ -83,7 +83,7 @@
     git reset --hard <id>
 
 ### Criar um atalho no Git
-![image](https://github.com/user-attachments/assets/449d8bef-2b3a-4f58-8235-aa9d228258cf)
+![image](https://github.com/user-attachments/assets/dea08482-122b-4d46-86f5-e4f5735fff1c)
 
 ### Boas práticas
     Nunca trabalhar em cima da branch main 
