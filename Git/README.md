@@ -55,3 +55,6 @@
     
 ### Git Log
     git log
+
+### Me trazer as informações do que foi alterado 
+    git diff
