@@ -71,5 +71,8 @@
 ### Restaurar arquivo 
     git restore <estado> <arquivo>
 
-### Renomar arquivo
+### Renomear arquivo
     git mv <arquivo1> <arquivo2>
+
+### Realizar um amend na mensagem 
+    git commit  -m "Commit" --amend
