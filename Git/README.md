@@ -70,3 +70,6 @@
 
 ### Restaurar arquivo 
     git restore <estado> <arquivo>
+
+### Renomar arquivo
+    git mv <arquivo1> <arquivo2>
