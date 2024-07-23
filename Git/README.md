@@ -96,3 +96,5 @@
 ### Criar branch 
     git branch ADDMENU
 
+### Mudar a branch 
+    git switch <nome da branch>
