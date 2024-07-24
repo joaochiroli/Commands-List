@@ -105,6 +105,9 @@
 ### Remover Branch
     git branch -d ADDMENU
 
+### Remova o repositório remoto:
+    git remote remove origin
+
 ### Criar novo repo 
     git init 
     git add README.md
