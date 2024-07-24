@@ -99,7 +99,7 @@
 ### Mudar a branch 
     git switch <nome da branch>
 
-### Passar o conteudo de uma branch para a main 
+### Passar o conteudo de uma branch para a main, entrar na branch main e fazer o comando abaixo
     git merge -m "teste" ADDMENU
 
 ### Remover Branch
