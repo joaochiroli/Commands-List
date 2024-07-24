@@ -104,3 +104,16 @@
 
 ### Remover Branch
     git branch -d ADDMENU
+
+### Criar novo repo 
+    git init 
+    git add README.md
+    git commit -m "first commit"
+    git branch -M main
+    git remote add origin https://github.com/joaochirolit/Git-Curso.git
+    git push -u origin main
+
+## Push um repositorio existente 
+    git remote add origin https://github.com/joaochirolit/Git-Curso.git
+    git brach -M main
+    git push -u origin main 
