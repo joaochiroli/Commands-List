@@ -120,3 +120,5 @@
     git remote add origin https://github.com/joaochirolit/Git-Curso.git
     git brach -M main
     git push -u origin main 
+
+## Voce pode criar um arquivo chamado .gitignore para ignorar 
