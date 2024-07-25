@@ -50,6 +50,9 @@
 ### Voltar ao Branch main
     git checkout main
 
+### Voltar ao commit
+    git checkout <id do commit>
+
 ### Lista branches (são bifurcações do código que criam linhas independentes de desenvolvimento) locais
     git branch
     
