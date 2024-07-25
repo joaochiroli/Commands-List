@@ -80,6 +80,9 @@
 ### Realizar um amend na mensagem 
     git commit  -m "Commit" --amend
 
+### Desafazendo as coisas
+    git commit --amend -m "Atualização necessaria para criação de novo arquivo"
+
 ![image](https://github.com/user-attachments/assets/ea29b64f-c199-4060-9230-57ee45f760ae)
 
 ### Voltar um estado da configuração 
