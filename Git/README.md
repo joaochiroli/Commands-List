@@ -47,8 +47,8 @@
 ### Envia commits locais para o repositório remoto
     git push origin main
      
-### Voltar ao Branch main
-    git checkout main
+### Voltar ao Branch principal
+    git checkout main ou git checkout master
 
 ### Voltar ao commit
     git checkout <id do commit>
