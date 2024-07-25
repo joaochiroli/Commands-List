@@ -122,3 +122,5 @@
     git push -u origin main 
 
 ## Voce pode criar um arquivo chamado .gitignore para ignorar 
+![image](https://github.com/user-attachments/assets/fd370eaf-8971-4dd6-9fdf-d93199035921)
+
