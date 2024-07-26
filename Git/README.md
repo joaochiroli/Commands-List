@@ -139,3 +139,9 @@
 
 
 ![image](https://github.com/user-attachments/assets/5af66f50-a44b-4f81-9c6d-9b43b477974b)
+
+## Listar tag
+    git tag 
+
+## Nova tag
+    git push origin v1.0
