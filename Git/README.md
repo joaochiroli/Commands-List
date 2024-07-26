@@ -132,3 +132,10 @@
 
 ## Log 2 dias atras 
     git log --since="2 days ago"
+
+
+## Git bare (você está criando um repositório que é pushable. Geralmente os repositórios bare são criados no servidor e são considerados repositórios para armazenamento)
+    git init --bare 
+
+
+![image](https://github.com/user-attachments/assets/5af66f50-a44b-4f81-9c6d-9b43b477974b)
