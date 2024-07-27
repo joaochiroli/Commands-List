@@ -122,6 +122,9 @@
     git remote add origin https://github.com/joaochirolit/Git-Curso.git
     git push -u origin main
 
+    origin é o repositorio remoto, voce pode descobrir usando o comando git remote -v
+    main é a branch
+
 ## Push um repositorio existente 
     git remote add origin https://github.com/joaochirolit/Git-Curso.git
     git brach -M main
