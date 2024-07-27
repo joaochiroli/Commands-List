@@ -148,3 +148,6 @@
 
 ## Nova tag
     git push origin v1.0
+
+## Configurar credencial para nao ficar usando token e senha toda hora
+    git config credencial.helper store
