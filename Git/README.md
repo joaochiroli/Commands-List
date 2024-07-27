@@ -153,3 +153,9 @@
 
 ## Configurar credencial para nao ficar usando token e senha toda hora
     git config credencial.helper store
+
+## Voltar as configurações antes de fazer o add 
+    git checkout -- .
+    
+    ![image](https://github.com/user-attachments/assets/4d1fed9c-303b-4990-8bec-7aeb50446ec0)
+
