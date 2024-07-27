@@ -18,6 +18,8 @@
 ### Se você quiser testar as suas configurações, você pode usar o comando git config --list para listar todas as configurações que o Git conseguir encontrar naquele momento:
     git config --list
 
+### VocÊ pode adicionar colaboradores ao seu projeto 
+    precisa ir té a interface web do github e dar as permissões
 ### Pedindo Ajuda
     git help <verb>
 
