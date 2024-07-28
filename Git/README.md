@@ -198,6 +198,6 @@ Coca    | Cola
     
 ## Python command 
 
-'''
+```
 codigo
-'''
+```
