@@ -167,3 +167,6 @@
 
 ## Strong/Bold vulgo negrito
     **TEXTOAQUI**
+
+## Markdown Link
+    [TEXTO](LINK)
