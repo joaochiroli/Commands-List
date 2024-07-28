@@ -170,3 +170,26 @@
 
 ## Markdown Link
     [TEXTO](LINK)
+
+## Markdown Link
+    <Propriolink>
+
+## Citação 
+    > Fazer a citação
+
+## Lista não ordenada 
+    - Manga 
+        - Verde 
+    - CAJU
+        - Semente
+        - UVA 
+
+## Listas Ordenadas
+    1. Manga 
+        1.1. Verde
+    2. Uva
+        2.1. Argentina
+
+## Tabelas 
+    Produto | Preço
+    --------|-------
