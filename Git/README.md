@@ -159,3 +159,11 @@
     
     ![image](https://github.com/user-attachments/assets/4d1fed9c-303b-4990-8bec-7aeb50446ec0)
 
+## Markdown itálico 
+    _texto que voce quer_
+
+## Markdown titulo 
+    # TEXTO
+
+## Strong/Bold vulgo negrito
+    **TEXTOAQUI**
