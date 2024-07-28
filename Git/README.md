@@ -199,5 +199,5 @@ Coca    | Cola
 ## Python command 
 
 ```python
-codigo
+def invert (texto):
 ```
