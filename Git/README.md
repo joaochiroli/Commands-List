@@ -196,3 +196,5 @@ Produto | Preço
 --------|-------
 Coca    | Cola 
     
+## Python command 
+
