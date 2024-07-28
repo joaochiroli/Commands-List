@@ -204,7 +204,7 @@ def invert (texto):
 
 ## Lista de tarefas
 
-- [] Acordar
-- [] Dormir
+- [ ] Acordar
+- [ ] Dormir
 - [x] Comer
 - [x] ~~Almoçar~~ 
