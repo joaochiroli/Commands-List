@@ -201,3 +201,10 @@ Coca    | Cola
 ```python
 def invert (texto):
 ```
+
+## Lista de tarefas
+
+- [] Acordar
+- [] Dormir
+- [x] Comer
+- [x] ~~Almoçar~~ 
