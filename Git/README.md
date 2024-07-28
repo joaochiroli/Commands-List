@@ -191,7 +191,8 @@
         2.1. Argentina
 
 ## Tabelas 
-    Produto | Preço
-    --------|-------
-    Coca    | Cola 
+
+Produto | Preço
+--------|-------
+Coca    | Cola 
     
