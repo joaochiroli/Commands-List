@@ -3,7 +3,7 @@
 
 ## Setup and Configuration
 
-- `git init` - Inicializando um Repositório em um diretório existente local
+- `git init` - Inicializando um repositório em um diretório existente local
 
 
 #### A primeira coisa que você deve fazer ao instalar Git é configurar seu nome de usuário e endereço de e-mail. Isto é importante porque cada commit usa esta informação, e ela é carimbada de forma imutável nos commits que você começa a criar:
