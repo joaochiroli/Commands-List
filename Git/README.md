@@ -1,6 +1,13 @@
 # GIT
 
 
+## Git States 
+
+
+- Modified
+- Staged
+- Comitted
+
 ## Setup and Configuration
 
 - `git init` - Initialize a new Git repository
@@ -16,8 +23,15 @@
 - `git rm <file(s)>` - Remove files from working tree and staging area
 - `git mv <old_file> <new_file>` -  Move or rename a file
 - `git commit -m "commit message"` -  Commit changes with a message
+- `git commit -a -m "commit message"` -  Commit and add file in the same time
 - `git diff` -  Show differences between working tree and last commit
 
+
+## Remote Repositories
+
+- `git remote -v` - List remote repositories
+- `git pull <remote_name> <remote_branch>` - Pull changes from a remote branch, example **git pull origin main**
+- `git push -u <remote_name> <local_branch>` - changes from a remote branch, 
 
 ### VocÊ pode adicionar colaboradores ao seu projeto 
     precisa ir té a interface web do github e dar as permissões
@@ -26,13 +40,6 @@
 
 ### Por exemplo, você pode ver a manpage do commando config rodando
     git help config
-
-
-### Traz as Mudanças Remotas
-    git pull origin main
-
-### Envia commits locais para o repositório remoto
-    git push origin main
      
 ### Voltar ao Branch principal
     git checkout main ou git checkout master
@@ -48,12 +55,6 @@
 
 ### Me trazer delog de modo resumido  
     git log --online
-
-### Fazendo o commit junto com o add 
-    git commit  -a -m "Commit"
-
-### Git tem basicamente 3 estados 
-    Working / Staging / Commit
 
 ### Restaurar arquivo 
     git restore <estado> <arquivo>
