@@ -3,15 +3,21 @@
 
 ## Setup and Configuration
 
-- `git init` - Inicializando um repositório em um diretório existente local
+- `git init` - Initialize a new Git repository
+- `git clone <url>` - Clone and create a local copy of a remote repository
+- `git config --global <setting_name> <value>` - Configure global Git settings
+- `git config <setting_name> <value>` -  Configure local Git settings for a specific repo
+- `git config --list` -  Show a summary of your Git configuration settings
 
+## File Operations
 
-#### A primeira coisa que você deve fazer ao instalar Git é configurar seu nome de usuário e endereço de e-mail. Isto é importante porque cada commit usa esta informação, e ela é carimbada de forma imutável nos commits que você começa a criar:
-    git config --global user.name "Fulano de Tal"
-    git config --global user.email fulanodetal@exemplo.br 
+- `git status` - Show working tree status
+- `git add <file(s)>` - Add files to the staging area
+- `git rm <file(s)>` - Remove files from working tree and staging area
+- `git mv <old_file> <new_file>` -  Move or rename a file
+- `git commit -m "commit message"` -  Commit changes with a message
+- `git diff` -  Show differences between working tree and last commit
 
-### Se você quiser testar as suas configurações, você pode usar o comando git config --list para listar todas as configurações que o Git conseguir encontrar naquele momento:
-    git config --list
 
 ### VocÊ pode adicionar colaboradores ao seu projeto 
     precisa ir té a interface web do github e dar as permissões
@@ -21,22 +27,6 @@
 ### Por exemplo, você pode ver a manpage do commando config rodando
     git help config
 
-
-### Inicializando um Repositório em um Diretório Existente Local
-    cd /home/user/your_repository
-    git init
-
-### Criar uma cópia local do repositório do GIT
-    git clone https://github.com/joaochiroli/DevOps-Projects/
-
-### Verificando os Status de Seus Arquivos
-    git status
-
-### Adicionar os Arquivos
-    git add .
-
-### Fazer Commit das Resoluções
-    git commit -m "Resolvendo conflitos de merge"
 
 ### Traz as Mudanças Remotas
     git pull origin main
@@ -56,9 +46,6 @@
 ### Git Log
     git log
 
-### Me trazer as informações do que foi alterado 
-    git diff
-
 ### Me trazer delog de modo resumido  
     git log --online
 
@@ -70,9 +57,6 @@
 
 ### Restaurar arquivo 
     git restore <estado> <arquivo>
-
-### Renomear arquivo
-    git mv <arquivo1> <arquivo2>
 
 ### Realizar um amend na mensagem 
     git commit  -m "Commit" --amend
