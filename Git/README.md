@@ -193,3 +193,5 @@
 ## Tabelas 
     Produto | Preço
     --------|-------
+    Coca    | Cola 
+    
