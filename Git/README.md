@@ -33,6 +33,15 @@
 - `git pull <remote_name> <remote_branch>` - Pull changes from a remote branch, example **git pull origin main**
 - `git push -u <remote_name> <local_branch>` - Push changes to a remote repository, example **git push -u origin main**
 
+## Example
+
+```
+git add .
+git commit -m "Organizando Documento 3.0"
+git push -u origin main
+
+```
+
 ### VocÊ pode adicionar colaboradores ao seu projeto 
     precisa ir té a interface web do github e dar as permissões
 ### Pedindo Ajuda
