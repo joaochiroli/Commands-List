@@ -15,6 +15,7 @@
 - `git config --global <setting_name> <value>` - Configure global Git settings
 - `git config <setting_name> <value>` -  Configure local Git settings for a specific repo
 - `git config --list` -  Show a summary of your Git configuration settings
+- `git config credencial.helper store` -  Configure credentials so you don't have to use a token and password all the time
 - `git init --bare` - Initialize a new Git Bare repository
 
 ![image](https://github.com/user-attachments/assets/5af66f50-a44b-4f81-9c6d-9b43b477974b)
@@ -41,9 +42,10 @@
 - `git branch <name>` - Create a branch
 - `git branch -d <name>` - Remove a branch
 - `git checkout <commit or branch>` - Switch to a specific branch or commit
+- `git checkout -- .` - Come back configurations before the add
 - `git merge -m <text> <branch>` - Merge. Example **git merge -m "teste" ADDMENU**
 
-
+![image](https://github.com/user-attachments/assets/4d1fed9c-303b-4990-8bec-7aeb50446ec0)
 
 
 ## Commit History
@@ -52,52 +54,29 @@
 - `git log --online` - Show commit history with less information
 - `git log --since="2 days ago"` - Show commit history of the last 2 days
 
-## Help
+## Help / Tag / Management
 
 - `git help or git help <verb>` - Show commit history
-
-
-### VocÊ pode adicionar colaboradores ao seu projeto 
-    precisa ir té a interface web do github e dar as permissões
+- `git tag` - List tags
+- `git reset --hard <id>` - Discard changes and move HEAD to a specific commit
 
 
 ![image](https://github.com/user-attachments/assets/ea29b64f-c199-4060-9230-57ee45f760ae)
 
-### Voltar um estado da configuração 
-    git reset --hard <id>
+
 
 ### Criar um atalho no Git
 ![image](https://github.com/user-attachments/assets/dea08482-122b-4d46-86f5-e4f5735fff1c)
-
-### Boas práticas
-    Nunca trabalhar em cima da branch main 
-
-![image](https://github.com/user-attachments/assets/efda13de-4414-4422-8e51-21602b5ad1ce)
+ 
 
 
 
-### Passar o conteudo de uma branch para a main, entrar na branch main e fazer o comando abaixo
-    git merge -m "teste" ADDMENU
 
-
-## Voce pode criar um arquivo chamado .gitignore para ignorar 
+## Do you can create a file call .gitignore to ignore 
 ![image](https://github.com/user-attachments/assets/fd370eaf-8971-4dd6-9fdf-d93199035921)
 
-
-
-## Listar tag
-    git tag 
-
-## Nova tag
-    git push origin v1.0
-
-## Configurar credencial para nao ficar usando token e senha toda hora
-    git config credencial.helper store
-
-## Voltar as configurações antes de fazer o add 
-    git checkout -- .
     
-    ![image](https://github.com/user-attachments/assets/4d1fed9c-303b-4990-8bec-7aeb50446ec0)
+
 
 ## Example
 
