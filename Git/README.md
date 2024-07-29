@@ -33,7 +33,7 @@
 - `git mv <old_file> <new_file>` -  Move or rename a file
 - `git commit -m "commit message"` -  Commit changes with a message
 - `git commit -a -m "commit message"` -  Commit and add file in the same time
-- `git commit  -m "Commit" --amend"` -  Commit amend. Amend command is a convenient way to modify the most recent commit
+- `git commit  -m "Commit" --amend` -  Commit amend. Amend command is a convenient way to modify the most recent commit
 - `git diff` -  Show differences between working tree and last commit
 - `git restore <estado> <arquivo>` -  Restore the file
 
@@ -111,6 +111,7 @@ git push -u origin main
         - Semente
         - UVA 
 ```
+
 - Ordenated List
  ``` 
      1. Manga 
