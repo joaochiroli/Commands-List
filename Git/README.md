@@ -17,8 +17,13 @@
 - `git config --list` -  Show a summary of your Git configuration settings
 - `git config credencial.helper store` -  Configure credentials so you don't have to use a token and password all the time
 - `git init --bare` - Initialize a new Git Bare repository
+- `git config --global <setting_name> <value>` - Configure global Git settings like 
 
-![image](https://github.com/user-attachments/assets/5af66f50-a44b-4f81-9c6d-9b43b477974b)
+
+
+<div align="center">
+  <img src="https://github.com/user-attachments/assets/5af66f50-a44b-4f81-9c6d-9b43b477974b" alt="image" width="350"/>
+</div>
 
 ## File Operations
 
@@ -45,8 +50,10 @@
 - `git checkout -- .` - Come back configurations before the add
 - `git merge -m <text> <branch>` - Merge. Example **git merge -m "teste" ADDMENU**
 
-![image](https://github.com/user-attachments/assets/4d1fed9c-303b-4990-8bec-7aeb50446ec0)
 
+<div align="center">
+  <img src="https://github.com/user-attachments/assets/4d1fed9c-303b-4990-8bec-7aeb50446ec0" alt="image" width="350"/>
+</div>
 
 ## Commit History
 
@@ -61,19 +68,19 @@
 - `git reset --hard <id>` - Discard changes and move HEAD to a specific commit
 
 
-![image](https://github.com/user-attachments/assets/ea29b64f-c199-4060-9230-57ee45f760ae)
+<div align="center">
+  <img src="https://github.com/user-attachments/assets/ea29b64f-c199-4060-9230-57ee45f760ae" alt="image" width="350"/>
+  
+</div>
 
 
+## .gitignore
+- You can create a file call .gitignore to ignore files
 
-### Criar um atalho no Git
-![image](https://github.com/user-attachments/assets/dea08482-122b-4d46-86f5-e4f5735fff1c)
- 
-
-
-
-
-## Do you can create a file call .gitignore to ignore 
-![image](https://github.com/user-attachments/assets/fd370eaf-8971-4dd6-9fdf-d93199035921)
+<div align="center">
+  <img src="https://github.com/user-attachments/assets/fd370eaf-8971-4dd6-9fdf-d93199035921" alt="image" width="350"/>
+  
+</div>
 
     
 
@@ -87,54 +94,48 @@ git push -u origin main
 
 ```
 
-------------------------------------------------------------------
+## Markdown
 
-## Markdown itálico 
-    _texto que voce quer_
 
-## Markdown titulo 
-    # TEXTO
-
-## Strong/Bold vulgo negrito
-    **TEXTOAQUI**
-
-## Markdown Link
-    [TEXTO](LINK)
-
-## Markdown Link
-    <Propriolink>
-
-## Citação 
-    > Fazer a citação
-
-## Lista não ordenada 
-    - Manga 
+- `_texto que voce quer_`  - Italic
+- `# TEXTO` - Text
+- `**TEXTOAQUI**` - Strong/Bold
+- `[TEXTO](LINK)` - Link
+- `<Propriolink>` - Markdown Link
+- `> Fazer a citação` - Citation
+- Not Ordenated List
+ ``` 
+   - Manga 
         - Verde 
     - CAJU
         - Semente
         - UVA 
-
-## Listas Ordenadas
-    1. Manga 
+```
+- Ordenated List
+ ``` 
+     1. Manga 
         1.1. Verde
     2. Uva
         2.1. Argentina
+```
 
-## Tabelas 
-
+- Tables
+``` 
 Produto | Preço
 --------|-------
 Coca    | Cola 
-    
-## Python command 
+```
+
+- Python command
 
 ```python
 def invert (texto):
 ```
 
-## Lista de tarefas
-
+- Task List
+```
 - [ ] Acordar
 - [ ] Dormir
 - [x] Comer
 - [x] ~~Almoçar~~ 
+```
