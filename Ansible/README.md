@@ -33,5 +33,33 @@ serverb.lab.example.com
 
 `ansible-inventory -v -i <archive> --graph` list all tree of hosts 
 
+`ansible --version` list the version and the configuration archive
+
+`ansible --version` list the version and the configuration archive
+
+`ansible all -m ping` ping all hosts
+
 ### What is ansible.cfg ?
   Default configuration file of Ansible; normally, you don't change this file
+
+### Ansible sequency
+
+- `ANSIBLE_CONFIG` variable
+- ./ansible.cfg
+- ~/.ansible.cfg
+- /etc/ansible/ansible.cfg
+
+```
+[defaults]
+inventory = ./inventory
+remote_user = UsuarioNoHostGerenciado
+ask_pass = true
+host_key_checking = false
+
+[privilege escalation]
+become = true
+become_method = sudo
+become_user = root
+become_ask_pass = true
+
+```
