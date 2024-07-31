@@ -29,7 +29,10 @@ local_tmp               = ~/.ansible/tmp
 roles_path              = /etc/ansible/roles
 
 #--- Users settings
-remote_user             = root
+remote_user             = vagrant
+remote_password         = vagrant
+ansible_user            = vagrant
+ansible_password        = vagrant
 sudo_user               = root
 ask_pass                = no
 ask-sudo_pass           = no
