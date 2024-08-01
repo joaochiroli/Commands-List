@@ -31,8 +31,6 @@ roles_path              = /etc/ansible/roles
 #--- Users settings
 remote_user             = vagrant
 remote_password         = vagrant
-ansible_user            = vagrant
-ansible_password        = vagrant
 sudo_user               = root
 ask_pass                = no
 ask-sudo_pass           = no
@@ -120,12 +118,54 @@ Example of modules:
   - `ansible all -m systemd -a "name=sshd state=restarted" -b` restart services
 
 
+### Inventory
 
-  
+'INI-file' structure, blocks define groups. Hosts alowed in more than one group.
 
 
+INI:
+```
+[debian]
+192.168.15.10
 
+[redhat]
+192.168.15.9
 
+[linux:children]
+debian
+redhat
+
+```
+
+YAML:
+```
+all:
+  children:
+    debian:
+      hosts:
+        192.168.15.8:
+    redhat:
+      hosts:
+        192.168.15.[10:12]:
+  vars:
+    ansible_user: vagrant
+    ansible_become: yes
+    ansible_password: vagrant
+```
+
+Command to put extra vars:
+
+```
+ansible all --extra-vars guitarra=guitarrista -m debug -a var=guitarra
+```
+
+Enable all Plugins and use dinamic groups aws, go to ansible.cfg and put:
+```
+[inventory]
+
+enable_plugins = aws_ec2, host_list, script, auto, yaml, ini, toml
+
+```
 
 
 
