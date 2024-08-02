@@ -169,6 +169,15 @@ enable_plugins = aws_ec2, host_list, script, auto, yaml, ini, toml
 
 ```
 
+It's possible create a repository call group_vars or host_vars for put files with vars informations 
+In host_vars the files need follow this structure: 
+<ip>
+<hostname>
+And inside of file you can put the vars informations
+
+IN group_vars the files need follow this structure:  
+<group_name>
+And inside this file you put the var informations
 
 
 
