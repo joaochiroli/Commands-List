@@ -74,7 +74,26 @@ $ ansible --version` list the version and the configuration archive
 
 $ ansible-config list` show all config in use 
 
-$ ansible-doc list` show all modules in use 
+$ ansible-doc -l` list all modules
+
+$ ansible-config
+
+$ ansible-console
+
+$ ansible-doc
+
+$ ansible-galaxy
+
+$ ansible-inventory
+
+$ ansible-playbook
+
+$ ansible-pull
+
+$ ansible-vault
+
+$ ansible
+
 ```
 
 ### Modules => Tasks => Plays => Playbook.
@@ -106,7 +125,7 @@ Example of modules:
   ```
   - Module: `command` - executes a single command that will not be processed through the shell
   -  `ansible all -m <command>`  
-  -  `ansible all -m setup`  list inventory
+  -  `ansible all -i setup`  list inventory
   -  `ansible all -m setup` show inventory 
   -  `ansible all -m setup -a "filter=ansible_default_ipv4"` show inventory and a specific information 
   -  `ansible all -m copy -a "src=./ansible.cfg dest=/tmp mode=644 owner=vagrant"` copy localhost to guest
@@ -179,9 +198,39 @@ IN group_vars the files need follow this structure:
 <group_name>
 And inside this file you put the var informations
 
+### Ansible COllection
 
+Command = colletion + module
 
+Colletions Locate /home/joaochiroli/.ansible/collections/ansible_collections/
 
+show all collections: ansible-galaxy colletion
+
+install collection: ansible-galaxy install grafana.grafana
+
+### Playbook
+
+ansible-playbook -i <inventary> <playbook> --syntax-check
+
+ansible-playbook -i <inventary> <playbook> --list-hosts
+
+ansible-playbook -i <inventary> <playbook> --list-task
+
+#### tags
+
+  You can use tags for set a specific task
+
+```
+  - name: test
+    host: abc
+    tasks:
+    -   name: Update apt cache
+        ansible.builtin.apt:
+          update_cache: yes
+        tags: debian
+
+    
+```
 
 ### SSH configuration 
 
