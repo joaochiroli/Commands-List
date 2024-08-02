@@ -72,7 +72,7 @@ $ ansible-inventory -v -i <archive> --graph` list all tree of hosts
 
 $ ansible --version` list the version and the configuration archive
 
-$ ansible-config list` show all modules in use 
+$ ansible-config list` show all config in use 
 
 $ ansible-doc list` show all modules in use 
 ```
