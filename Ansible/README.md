@@ -15,11 +15,13 @@ Example ansible.cfg
 [defaults]
 
 #--- General settings
+interpreter_python      = auto_legacy_silent     --> usado para executar o comando em python em outra máquina independente da versão
 forks                   = 5
 log_path                = /var/log/ansible.log
 module_name             = command
 executable              = /bin/bash
 ansible_managed         = Ansible managed
+host_key_cheking        = false ---> importante para não pedir a chave do host
 
 #--- Files/Directory settings
 inventory               = /etc/ansible/hosts
@@ -148,7 +150,7 @@ all:
       hosts:
         192.168.15.[10:12]:
   vars:
-    ansible_user: vagrant
+    ansible_user: vagrant --> qual usuário vai se autenticar no host de destino
     ansible_become: yes
     ansible_password: vagrant
 ```
