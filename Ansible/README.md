@@ -436,6 +436,8 @@ Conjunto de tarefas que voce pode executar, caso uma tarefa nao funcione ele pas
         - eddie
         - dime
         - taylor
+      loop_control:
+        pause: 3    ### voce pode usar um controle entre as instalações
 
 ```
 
