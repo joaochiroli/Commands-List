@@ -464,7 +464,7 @@ Conjunto de tarefas que voce pode executar, caso uma tarefa nao funcione ele pas
 
 or
 
-``
+```
 - name: Ansible Loop
   hosts: rocky01
   tasks:
