@@ -419,6 +419,26 @@ Conjunto de tarefas que voce pode executar, caso uma tarefa nao funcione ele pas
 
 
 ```
+### Simple Loop
+ 
+
+```
+---
+- name: Ansible Loop
+  hosts: rocky01
+  tasks:
+    - name: USER | Add User
+      ansible.builtin.user:
+        name: "{{ item }}"
+        state: present
+        groups: "wheel"
+      loop:
+        - eddie
+        - dime
+        - taylor
+
+```
+
 
 ### SSH configuration 
 
