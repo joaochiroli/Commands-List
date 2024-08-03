@@ -391,7 +391,34 @@ Is possible do a interaction with your playbook
       when: not backup
 
 ```
+### Blocks
+Conjunto de tarefas que voce pode executar, caso uma tarefa nao funcione ele passa pra proxima. 
 
+```
+---
+- name: Block Testing
+  hosts: rocky01
+  tasks:
+    - block:
+        - ansible.builtin.debug:
+            msg: "#### EXECUTADO NORMALMENTE ####"
+        - name: Simulando erros
+          ansible.builtin.shell: ./configure
+          args:
+            chdir: /tmp
+        - ansible.builtin.debug:
+            msg: "NUNCA SERA EXECUTADO"
+      rescue:
+        - ansible.builtin.debug:
+            msg: "ERROR - FALHA NO TARGET {{ inventory_hostname }}"
+      always:
+        - name: SISOP | Update System
+          ansible.builtin.dnf:
+            name: "*"
+            state: latest
+
+
+```
 
 ### SSH configuration 
 
