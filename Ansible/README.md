@@ -460,6 +460,21 @@ Conjunto de tarefas que voce pode executar, caso uma tarefa nao funcione ele pas
 
 ```
 
+or
+
+``
+- name: Ansible Loop
+  hosts: rocky01
+  tasks:
+    - name: SYSTEM | Copy files
+      ansible.builtin.copy: 
+        src: "{{ item.src }}" 
+        dest: "{{ item.dest }}"
+      with_items:
+        - { src: '/tmp/file1.txt', dest: '/tmp/file1.txt' }
+        - { src: '/tmp/file2.txt', dest: '/tmp/file2.txt' }
+        - { src: '/tmp/file3.txt', dest: '/tmp/file3.txt' }
+```
 
 ### SSH configuration 
 
