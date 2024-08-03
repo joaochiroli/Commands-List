@@ -478,6 +478,24 @@ or
         - { src: '/tmp/file3.txt', dest: '/tmp/file3.txt' }
 ```
 
+### Handles
+ 
+
+```
+
+- name: Ansible Handlers
+  hosts: rocky01
+  tasks:
+    - name: NGINX | Change Listener
+      ansible.builtin.replace:
+        dest: /etc/nginx/nginx.conf
+        regexp: 'listen       80 default_server;'
+        replace: 'listen       {{ ansible_default_ipv4.address }}:80 default_server;'
+
+
+```
+
+
 ### SSH configuration 
 
 ```
