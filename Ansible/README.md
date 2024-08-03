@@ -198,7 +198,7 @@ IN group_vars the files need follow this structure:
 <group_name>
 And inside this file you put the var informations
 
-### Ansible COllection
+### Ansible Collection
 
 Command = colletion + module
 
@@ -368,6 +368,28 @@ Is possible do a interaction with your playbook
         name: "*"
         state: latest
       when: ansible_distribution == "Debian"
+```
+
+### Conditions - Bool
+
+```
+---
+- name: Ansible Conditionals
+  hosts: rocky01
+  vars:
+    backup: true
+    snapshot: false
+  tasks:
+    - name: Run the task if 'backup' is true
+      ansible.builtin.debug:
+        msg: "Congratulations"
+      when: backup | bool
+
+    - name: Run the task if 'backup' is false
+      ansible.builtin.debug:
+        msg: "Critical. Make backup."
+      when: not backup
+
 ```
 
 
