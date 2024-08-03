@@ -126,7 +126,7 @@ Example of modules:
   - Module: `command` - executes a single command that will not be processed through the shell
   -  `ansible all -m <command>`  
   -  `ansible all -i setup`  list inventory
-  -  `ansible all -m setup` show inventory 
+  -  `ansible all -m setup` show inventory (ansible facts)
   -  `ansible all -m setup -a "filter=ansible_default_ipv4"` show inventory and a specific information 
   -  `ansible all -m copy -a "src=./ansible.cfg dest=/tmp mode=644 owner=vagrant"` copy localhost to guest
   -  `ansible-config list -t <module>` show especific module in use like **ansible-config list -t become**
@@ -221,6 +221,7 @@ ansible-playbook -i <inventary> <playbook> --list-task
   You can use tags for set a specific task
 
 ```
+---
   - name: test
     host: abc
     tasks:
@@ -228,9 +229,86 @@ ansible-playbook -i <inventary> <playbook> --list-task
         ansible.builtin.apt:
           update_cache: yes
         tags: debian
+...
 
-    
+$ ansible-playbook --tag debian UpdateLinux.yml
+
 ```
+
+#### Vars
+
+```
+---
+
+- name: testando variáveis
+  hosts: debian
+  vars: 
+    message: "MENSAGEM DE TESTE DA VARIAVEL"
+    packages:
+      - htop
+      - vim  
+  tasks: 
+    - name: DEBUG
+      ansible.builtin.debug:
+        msg: "{{ message }}"
+    
+    - name: Install packages
+      ansible.builtin.apt:
+        name: "{{ packages }}"
+        state: latest 
+...
+
+$ ansible-playbook -i hosts playbooks/vars.yml
+
+```
+
+```
+---
+
+- name: testando variáveis
+  hosts: debian
+  vars_files: /etc/ansible/playbook_vars.yml
+  vars: 
+    message: "MENSAGEM DE TESTE DA VARIAVEL"
+    packages:
+      - htop
+      - vim  
+  tasks: 
+    - name: DEBUG
+      ansible.builtin.debug:
+        msg: "{{ message }}"
+    
+    - name: Install packages
+      ansible.builtin.apt:
+        name: "{{ packages }}"
+        state: latest 
+...
+
+file playbook_vars.yml
+packages:
+  - htop
+  - vim
+  - tcpdump
+
+$ ansible-playbook -i hosts playbooks/vars.yml
+
+```
+
+
+```
+- name: testando variáveis
+  hosts: debian
+  tasks: 
+    - name: DEBUG | ANSIBLE FACTS
+      ansible.builtin.debug:
+        msg: "{{ ansible_all_ipv4_addresses }}"
+
+$ ansible -i <inventory> -m setup
+
+
+```
+
+
 
 ### SSH configuration 
 
