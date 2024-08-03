@@ -308,6 +308,44 @@ $ ansible -i <inventory> -m setup
 
 ```
 
+### Prompt 
+
+Is possible do a interaction with your playbook
+
+
+```
+---
+- name: Ansible Prompt | Creating user on Linux
+  hosts: all
+  vars_prompt:
+    - name: username
+      prompt: What is your username?
+      private: false
+    - name: password
+      prompt: What is your password?
+      private: true
+      encrypt: "md5_crypt"
+      confirm: yes
+    - name: shell
+      prompt: What is your shell ?
+      private: false
+  tasks:
+    - name: Print a message
+      ansible.builtin.debug:
+        msg: 'Usuario: {{ username }} | Password: {{ password }} | Shell: {{ shell }}'
+
+    - name: USER | Add user
+      ansible.builtin.user:
+        name: "{{ username }}"
+        comment: "User created by Ansible"
+        shell: "{{ shell }}"
+        home: "/home/{{ username }}"
+        password: "{{ password }}"
+
+
+```
+
+
 
 
 ### SSH configuration 
