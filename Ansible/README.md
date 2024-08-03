@@ -440,6 +440,27 @@ Conjunto de tarefas que voce pode executar, caso uma tarefa nao funcione ele pas
 ```
 
 
+### Compost Loop
+ 
+
+```
+- name: Ansible Loop
+  hosts: rocky01
+  tasks:
+    - name: USER | Add User
+      ansible.builtin.user:
+        name: "{{ item.name }}"
+        state: present
+        comment: "{{ item.comment }}"
+        groups: "wheel"
+      loop:
+        - { name: 'eddie', comment: 'Van Halen' }
+        - { name: 'dime', comment: 'Pantera' }
+        - { name: 'taylor', comment: 'Foo Fighters' }
+
+```
+
+
 ### SSH configuration 
 
 ```
