@@ -61,40 +61,25 @@ retries                 = 3
 
 ### Commands 
 
-```
-$ ansible all --list-hosts` list all hosts recognized by ansible
 
-$ ansible ungrouped --list-hosts` list all hosts without group
+- `ansible all --list-hosts` list all hosts recognized by ansible
+- `ansible ungrouped --list-hosts` list all hosts without group
+- `ansible <host-or-group> -i <archive> --list-hosts` list hosts 
+- `ansible-inventory -v -i <archive> --graph` list all tree of hosts
+- `ansible --version` list the version and the configuration archive
+- `ansible-config list` show all config in use
+- `ansible-doc -l` list all modules
+- `ansible-config`
+- `ansible-console`
+- `ansible-doc`
+- `ansible-galaxy`
+- `ansible-inventory`
+- `ansible-playbook`
+- `ansible-pull`
+- `ansible-vault`
+- `ansible`
 
-$ ansible <host-or-group> -i <archive> --list-hosts` list hosts 
 
-$ ansible-inventory -v -i <archive> --graph` list all tree of hosts 
-
-$ ansible --version` list the version and the configuration archive
-
-$ ansible-config list` show all config in use 
-
-$ ansible-doc -l` list all modules
-
-$ ansible-config
-
-$ ansible-console
-
-$ ansible-doc
-
-$ ansible-galaxy
-
-$ ansible-inventory
-
-$ ansible-playbook
-
-$ ansible-pull
-
-$ ansible-vault
-
-$ ansible
-
-```
 
 ### Modules => Tasks => Plays => Playbook.
 
