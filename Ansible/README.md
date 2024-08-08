@@ -7,6 +7,8 @@
 - ~/.ansible.cfg
 - /etc/ansible/ansible.cfg
 
+#### Modules => Tasks => Plays => Playbook
+
 ### What is ansible.cfg ?
 Default configuration file of Ansible; normally, you don't change this file
 Example ansible.cfg
