@@ -83,8 +83,6 @@ retries                 = 3
 
 
 
-### Modules => Tasks => Plays => Playbook.
-
 Let us see buidlding blocks about Ansible:
 
 - **Inventory:** It is a simple list of hosts; /etc/ansible/hosts
