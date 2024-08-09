@@ -470,7 +470,8 @@ or
 ```
 ### Ansible Roles
 
-![Uploading image.png…]()
+![Captura de tela de 2024-08-09 18-44-46](https://github.com/user-attachments/assets/66627702-80ac-4632-817d-c2d2bd5edb19)
+
 
 
 ### Ansible Modules 
