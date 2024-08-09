@@ -83,7 +83,7 @@ retries                 = 3
 
 
 
-Let us see buidlding blocks about Ansible:
+### Ansible Blocks:
 
 - **Inventory:** It is a simple list of hosts; /etc/ansible/hosts
 - **Playbook or commands:** Execution of desired actions.
@@ -102,14 +102,8 @@ Let us see buidlding blocks about Ansible:
 Example of modules:  
   - Module: `ping` - the simplest module that is useful to verify host connectivity
   - Module: `shell` - a module that executes shell command on a specified host(s)
-
-  ```
-  $ ansible -m ping all
-  $ ansible -m shell -a 'date; whoami' localhost #hostname_or_a_group_name
-
-  ```
   - Module: `command` - executes a single command that will not be processed through the shell
-  -  `ansible all -m <command>`  
+  -  `ansible all -m <command>`  like **ansible -m ping all** or **ansible -m shell -a 'date; whoami'**
   -  `ansible all -i setup`  list inventory
   -  `ansible all -m setup` show inventory (ansible facts)
   -  `ansible all -m setup -a "filter=ansible_default_ipv4"` show inventory and a specific information 
@@ -126,10 +120,9 @@ Example of modules:
 
 ### Inventory
 
-'INI-file' structure, blocks define groups. Hosts alowed in more than one group.
+Can be static or a dynamic inventory 
 
-
-INI:
+INI
 ```
 [debian]
 192.168.15.10
