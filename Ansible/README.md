@@ -475,7 +475,8 @@ or
 ![image](https://github.com/user-attachments/assets/69e877a2-d946-4d52-a38f-c4da6cfe2e5e)
 
 
-- ´ansible-galaxy init <directory name>´ Command to create the roles directory with childrens directories
+- `ansible-galaxy init <directory name>` Command to create the roles directory with childrens directories
+
 
 ### Ansible Modules 
 
