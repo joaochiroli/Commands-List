@@ -178,13 +178,10 @@ And inside this file you put the var informations
 
 ### Ansible Collection
 
-Command = colletion + module
-
-Colletions Locate /home/joaochiroli/.ansible/collections/ansible_collections/
-
-show all collections: ansible-galaxy colletion
-
-install collection: ansible-galaxy install grafana.grafana
+- Command = colletion + module
+- Colletions Locate /home/joaochiroli/.ansible/collections/ansible_collections/
+- Show all collections: ansible-galaxy colletion
+- Install collection: ansible-galaxy install grafana.grafana
 
 ### Playbook
 
