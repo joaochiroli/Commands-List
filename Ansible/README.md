@@ -392,7 +392,7 @@ Conjunto de tarefas que voce pode executar, caso uma tarefa nao funcione ele pas
 
 
 ```
-### Simple Loop
+#### Simple Loop
  
 
 ```
@@ -415,7 +415,7 @@ Conjunto de tarefas que voce pode executar, caso uma tarefa nao funcione ele pas
 ```
 
 
-### Compost Loop
+#### Compost Loop
  
 
 ```
@@ -451,7 +451,7 @@ or
         - { src: '/tmp/file3.txt', dest: '/tmp/file3.txt' }
 ```
 
-### Handles
+#### Handles
  
 
 ```
