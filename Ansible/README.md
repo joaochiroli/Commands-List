@@ -98,7 +98,7 @@ retries                 = 3
 
 - **AD HOC** command-line tool to automate a single task on one or more managed nodes.
 
-- **Module** a program (usually python) that executes, does some work and returns proper JSON output
+- **Module** a program (usually python) that executes, does some work and returns proper JSON output. Like: copy, file, yum, service
 Example of modules:  
   - Module: `ping` - the simplest module that is useful to verify host connectivity
   - Module: `shell` - a module that executes shell command on a specified host(s)
@@ -120,7 +120,8 @@ Example of modules:
 
 ### Inventory
 
-Two types: **Static Inventory** or  **Dynamic Inventory** 
+Types: **Static Inventory** or  **Dynamic Inventory** 
+Parameters: ansible_hosts, ansible_port, etc.
 
 INI
 ```
