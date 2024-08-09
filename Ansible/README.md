@@ -120,7 +120,7 @@ Example of modules:
 
 ### Inventory
 
-Can be static or a dynamic inventory 
+Two types: **Static Inventory** or  **Dynamic Inventory** 
 
 INI
 ```
