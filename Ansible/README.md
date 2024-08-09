@@ -185,11 +185,9 @@ And inside this file you put the var informations
 
 ### Playbook
 
-ansible-playbook -i <inventary> <playbook> --syntax-check
-
-ansible-playbook -i <inventary> <playbook> --list-hosts
-
-ansible-playbook -i <inventary> <playbook> --list-task
+- ansible-playbook -i <inventary> <playbook> --syntax-check
+- ansible-playbook -i <inventary> <playbook> --list-hosts
+- ansible-playbook -i <inventary> <playbook> --list-task
 
 #### tags
 
@@ -283,7 +281,7 @@ $ ansible -i <inventory> -m setup
 
 ```
 
-### Prompt 
+#### Prompt 
 
 Is possible do a interaction with your playbook
 
@@ -320,7 +318,7 @@ Is possible do a interaction with your playbook
 
 ```
 
-### Conditions
+#### Conditions
 
 ```
 - name: Ansible Conditionals (when)
@@ -345,7 +343,7 @@ Is possible do a interaction with your playbook
       when: ansible_distribution == "Debian"
 ```
 
-### Conditions - Bool
+#### Conditions - Bool
 
 ```
 ---
@@ -366,7 +364,7 @@ Is possible do a interaction with your playbook
       when: not backup
 
 ```
-### Blocks
+#### Blocks
 Conjunto de tarefas que voce pode executar, caso uma tarefa nao funcione ele passa pra proxima. 
 
 ```
