@@ -477,7 +477,7 @@ or
 
 - `ansible-galaxy init <directory name>` Command to create the roles directory with childrens directories
 
-Itś possible configure roles like bellow:
+It's possible configure roles like bellow:
 
 ![image](https://github.com/user-attachments/assets/718bd913-9dff-4e8e-acb7-fdf3a3c78b24)
 
