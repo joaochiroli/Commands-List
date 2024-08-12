@@ -80,6 +80,8 @@ retries                 = 3
 - `ansible-pull`
 - `ansible-vault`
 - `ansible`
+- `ansible all -m setup` show inventory (ansible facts)
+
 
 
 
