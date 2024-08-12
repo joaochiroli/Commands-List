@@ -485,7 +485,10 @@ It's possible configure roles like bellow:
 
 
 
-### Ansible Modules 
+### Ansible Vault
+
+- `ansible-vault encrypt passwd.yml` encrypt file with sensible contents
+- `ansible-playbook --ask-vault-password --syntax-check` check playbook encrypt
 
 ### SSH configuration 
 
