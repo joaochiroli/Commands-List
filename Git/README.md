@@ -11,6 +11,8 @@
 ## Setup and Configuration
 
 - `git init` - Initialize a new Git repository
+- git config --global user.name "Fulano de Tal"
+- git config --global user.email fulanodetal@exemplo.br
 - `git clone <url>` - Clone and create a local copy of a remote repository
 - `git config --global <setting_name> <value>` - Configure global Git settings
 - `git config <setting_name> <value>` -  Configure local Git settings for a specific repo
