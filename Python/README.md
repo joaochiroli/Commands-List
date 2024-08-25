@@ -2,6 +2,7 @@
 
 - n1,n2 = input("Digite dois números ").split()
 - x = int(input())
+- A, B = map(float, input().split())
 ```
 x,y = input().split()
 valor = 0.00   
