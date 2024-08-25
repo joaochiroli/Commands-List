@@ -40,3 +40,14 @@
 - VPC Flow Logs:
     - Permite capturar informações sobre o tráfego IP indo de e para interfaces de rede na VPC.
 
+#### EC2
+
+AWS EC2
+
+- EC2 é uma das ofertas mais populares da AWS.
+- EC2 = Elastic Compute Cloud = Infraestrutura como Serviço.
+- Consiste principalmente na capacidade de:
+- Alugar máquinas virtuais (EC2).
+- Armazenar dados em unidades de armazenamento virtual (EBS).
+- Distribuir a carga entre as máquinas (ELB).
+- Dimensionar os serviços usando um grupo de dimensionamento automático (ASG).
