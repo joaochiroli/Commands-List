@@ -16,3 +16,8 @@ for i in range(y1):
   
 print("%.2f" % valor)
 ```
+
+```
+mylist = ["apple", "banana", "cherry"]
+x = len(mylist)
+```
