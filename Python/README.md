@@ -19,5 +19,5 @@ print("%.2f" % valor)
 
 ```
 mylist = ["apple", "banana", "cherry"]
-x = len(mylist)
+x = len(mylist) ### retorna o comprimento de um objeto
 ```
