@@ -58,3 +58,8 @@ AWS EC2
 - Amazon EC2 Instance Store: Um armazenamento local temporário de alto desempenho, diretamente conectado à instância EC2.
 - Amazon EFS (Elastic File System): Um serviço de armazenamento de arquivos totalmente gerenciado, que fornece acesso compartilhado a várias instâncias EC2.
 - Amazon S3 (Simple Storage Service): Um serviço de armazenamento de objetos altamente durável e escalável.
+
+#### Outros Serviços
+
+- AWS CLI
+- Route 53 - DNS
