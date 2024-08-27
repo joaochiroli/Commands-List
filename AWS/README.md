@@ -51,3 +51,10 @@ AWS EC2
 - Armazenar dados em unidades de armazenamento virtual (EBS).
 - Distribuir a carga entre as máquinas (ELB).
 - Dimensionar os serviços usando um grupo de dimensionamento automático (ASG).
+
+#### STORAGE
+
+- Amazon EBS (Elastic Block Store): Um serviço de armazenamento de bloco persistente que oferece volumes de armazenamento de alto desempenho e duráveis para instâncias EC2.
+- Amazon EC2 Instance Store: Um armazenamento local temporário de alto desempenho, diretamente conectado à instância EC2.
+- Amazon EFS (Elastic File System): Um serviço de armazenamento de arquivos totalmente gerenciado, que fornece acesso compartilhado a várias instâncias EC2.
+- Amazon S3 (Simple Storage Service): Um serviço de armazenamento de objetos altamente durável e escalável.
