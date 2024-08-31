@@ -183,6 +183,7 @@ $(($idade +5))
 colocando o parametro -s nao mostra voce digitando a senha por exemplo
 ```
 read -s senha
+read -p "Enter the resource group name: " rg_name
 ```
 
 - **EXEMPLO PRÁTICO**
