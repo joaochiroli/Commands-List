@@ -1,3 +1,3 @@
 ### Commands
 
-- aws ec2 describe-vpc
+- aws ec2 describe-vpcs
