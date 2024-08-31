@@ -2,6 +2,8 @@
 
 - aws ec2 describe-vpcs
 - aws ec2 describe-vpcs | jq -r '.Vpcs[].VpcId'
+
+### CLI to automate the creation of an EC2 instance, configuration of a security group, and launching the instance
 - `vpc_id=$(aws ec2 describe-vpcs --query 'Vpcs[1].VpcId' --output text)` Retrieve the VPC ID
 - `subnet_id=$(aws ec2 describe-subnets --filters "Name=vpc-id,Values=$vpc_id" | jq -r '.Subnets[].SubnetId' | head -n 1)` Retrieve the Subnet ID
 - `sg_name="SgAwsCli"` Set the Security Group name
