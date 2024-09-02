@@ -12,3 +12,4 @@
  - Criar Route Table
     - Atachar as subnets
     - Criar route table para saida pra internet 0.0.0.0/0
+ - Implementar EC2
