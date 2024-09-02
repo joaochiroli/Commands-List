@@ -1,6 +1,6 @@
 # Day one
 
-- Ec2 Simples
+### Ec2 Simples
 ![image](https://github.com/user-attachments/assets/fa22943b-c3d9-449a-9f93-b21f0547246f)
 
 
@@ -13,3 +13,8 @@
     - Atachar as subnets
     - Criar route table para saida pra internet 0.0.0.0/0
  - Implementar EC2
+   
+
+### ELB com 2 instancias e alta disponibilidade
+![image](https://github.com/user-attachments/assets/167bbca7-3b01-4956-9442-42afbcfbcae4)
+
