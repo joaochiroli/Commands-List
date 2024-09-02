@@ -22,3 +22,7 @@
  - Criar uma subnet
  - Criar uma outra EC2
  - Criar um Load Balancer e seus targets
+
+### RDS com read replica
+
+![image](https://github.com/user-attachments/assets/83846717-8a62-491f-96cf-d982662bfdda)
