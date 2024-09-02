@@ -18,3 +18,7 @@
 ### ELB com 2 instancias e alta disponibilidade
 ![image](https://github.com/user-attachments/assets/167bbca7-3b01-4956-9442-42afbcfbcae4)
 
+ - Como já criamos um Internet Gateway e rotas publicas para ele podemos reutilizar
+ - Criar uma subnet
+ - Criar uma outra EC2
+ - Criar um Load Balancer e seus targets
