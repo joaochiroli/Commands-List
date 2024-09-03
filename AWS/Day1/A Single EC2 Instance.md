@@ -23,6 +23,11 @@
  - Criar uma outra EC2
  - Criar um Load Balancer e seus targets
 
+### Aplication Load Balaner with auto scaling group
+
+![image](https://github.com/user-attachments/assets/214bcf2d-1fa8-4bf5-af66-a0474abebf39)
+
+
 ### RDS com read replica
 
 ![image](https://github.com/user-attachments/assets/83846717-8a62-491f-96cf-d982662bfdda)
