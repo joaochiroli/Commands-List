@@ -1,6 +1,5 @@
-### How to install AzCli on Ubuntu
+How to install AzCli on Ubuntu
 
-```
 sudo apt-get update
 sudo apt-get install apt-transport-https ca-certificates curl gnupg lsb-release
 sudo mkdir -p /etc/apt/keyrings
@@ -21,4 +20,3 @@ sudo apt-get update
 sudo apt-get install azure-cli
 
 az login
-```
