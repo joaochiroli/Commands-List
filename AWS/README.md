@@ -63,3 +63,16 @@ AWS EC2
 
 - AWS CLI
 - Route 53 - DNS
+
+
+#### Install AWS configure 
+
+```
+aws --version
+aws configure
+
+AWS Access Key ID [None]:
+AWS Secret Access Key [None]:
+Default region name [None]: us-east-1
+Default output format [None]: json
+```
