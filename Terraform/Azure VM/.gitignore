@@ -1,0 +1,13 @@
+# Ignorar a pasta .terraform e seu conteúdo
+.terraform/
+
+# Ignorar o arquivo de bloqueio do Terraform
+.terraform.lock.hcl
+
+# Ignorar o arquivo de estado do Terraform
+terraform.tfstate
+
+# Ignorar o backup do arquivo de estado do Terraform
+terraform.tfstate.backup
+.terraform/
+.terraform/
