@@ -3,6 +3,9 @@
 - Inicializar alicação Go
 - go mod init api-mdc-go
 
-Quando você executa go mod init, o Go cria um arquivo chamado go.mod, que é usado para gerenciar as dependências do seu projeto e as versões de bibliotecas que ele usa. 
+Quando você executa go mod init, o Go cria um arquivo chamado go.mod, que é usado para gerenciar as dependências do seu projeto e as versões de bibliotecas que ele usa.
+
+- Compilar o código
+- RUN go build -o main . 
 
 Após o go.mod ter sido criado (normalmente por go mod init) e você ter adicionado dependências ao projeto (através de go get ou go mod tidy), o comando go mod download baixa as dependências especificadas para o cache local, permitindo que o projeto seja compilado ou executado corretamente.
