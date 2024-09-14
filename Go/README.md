@@ -1,0 +1,1 @@
+- Ao executar comandos como go build ou go mod tidy, o Go baixa automaticamente as dependências necessárias conforme especificadas no go.mod e mantém um cache local.
