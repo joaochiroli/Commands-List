@@ -37,3 +37,5 @@ docker inspect [container/image]: Exibe informações detalhadas sobre o contain
 #### Manutenção
 - docker system prune: Remove containers, volumes e imagens não utilizados para liberar espaço.
 - docker stats: Exibe o uso de recursos (CPU, memória, etc.) de containers em execução.
+
+Multi stage build usado em liguagens de programação compilada como Go
