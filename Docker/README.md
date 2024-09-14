@@ -42,3 +42,107 @@ docker inspect [container/image]: Exibe informações detalhadas sobre o contain
 - docker stats: Exibe o uso de recursos (CPU, memória, etc.) de containers em execução.
 
 Multi stage build usado em liguagens de programação compilada como Go
+
+Exemplo de Docker Compose:
+
+´´´
+version: '3'
+services:
+  mysql-mdc:
+    image: mysql:latest
+    container_name: mysql-mdc
+    restart: always
+    environment:
+      MYSQL_ROOT_PASSWORD: rootpassword
+      MYSQL_DATABASE: mdc_db
+      MYSQL_USER: mdc_user
+      MYSQL_PASSWORD: mdc_password
+    networks:
+      - mdc-network
+
+  tshoot-mdc:
+    build:
+      context: ./mdc-tshoot/
+      dockerfile: Dockerfile
+    container_name: tshoot-mdc
+    restart: always
+    networks:
+      - mdc-network
+
+networks:
+  mdc-network:
+    driver: bridge
+
+´´´
+
+- ´docker-compose up -d´ para executar o docker compose
+
+Exemplo de container de troubleshooting
+
+´´´
+# Usando a imagem base do Ubuntu 20.04
+FROM ubuntu:20.04
+
+# Definindo o diretório de trabalho dentro do contêiner
+WORKDIR /app
+
+# Atualizando o sistema operacional dentro do contêiner
+RUN apt-get update
+
+# Instalando pacotes necessários (exemplo: curl e vim)
+RUN apt-get install -y curl vim telnet mysql-client iputils-ping
+
+# Expondo a porta 80 para acessar a aplicação web
+EXPOSE 8080
+
+# Definindo o comando de inicialização do contêiner (exemplo: executando o Apache HTTP Server)
+CMD ["sh", "-c", "while true; do sleep 1; done"]
+
+´´´
+
+Exemplo de container Go
+
+´´´
+# Imagem base
+FROM golang:latest
+
+# Diretório de trabalho
+WORKDIR /app
+
+# Copiar os arquivos para o diretório de trabalho
+COPY . .
+
+# Compilar o código
+RUN go build -o main .
+
+# Comando de execução
+CMD ["./main"]
+
+´´´
+
+Exemplo de container Go multi stage
+
+´´´
+# Primeira etapa: compilação do código
+FROM golang:latest AS build
+
+WORKDIR /app
+
+# Copiar os arquivos necessários
+COPY . .
+
+# Compilar o código
+RUN go mod download
+RUN CGO_ENABLED=0 GOOS=linux go build -a -installsuffix cgo -o main .
+
+# Segunda etapa: imagem final mínima
+FROM alpine:latest
+
+WORKDIR /app
+
+# Copiar o binário compilado da etapa anterior
+COPY --from=build /app/main .
+
+# Comando de execução
+CMD ["./main"]
+´´´
