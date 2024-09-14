@@ -8,13 +8,14 @@
 - docker rm [container]: Remove um container.
 - docker logs [container]: Exibe os logs de um container.
 - docker exec -it [container] [command]: Executa um comando dentro de um container em execução (ex.: abrir um terminal bash).
+- docker exec -it mdc-container bash
 
 #### Imagens
 - docker images: Lista todas as imagens disponíveis localmente.
 - docker pull [image]: Baixa uma imagem do Docker Hub ou de um repositório.
 - docker rmi [image]: Remove uma imagem local.
 - docker build -t [tag] .: Constrói uma imagem a partir de um Dockerfile no diretório atual.
-docker tag [image_id] [repository:tag]: Marca uma imagem com uma nova tag.
+- docker tag [image_id] [repository:tag]: Marca uma imagem com uma nova tag.
 
 #### Volumes e Rede
 - docker volume create [volume_name]: Cria um volume.
@@ -22,6 +23,8 @@ docker tag [image_id] [repository:tag]: Marca uma imagem com uma nova tag.
 - docker network create [network_name]: Cria uma rede Docker.
 - docker network ls: Lista redes Docker criadas.
 - docker network connect [network_name] [container_name]: Conecta um container a uma rede específica.
+- docker run -d -v $(pwd)/mdc-volume:/data --name mdc-container ubuntu tail -f /dev/null - create a container and mount the volume
+
 
 #### Gerenciamento de Imagens e Containers
 - docker run [options] [image]: Cria e inicia um novo container a partir de uma imagem.
