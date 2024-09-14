@@ -45,8 +45,15 @@ resource "aws_security_group" "allow_tls" {
   description = "Allow TLS, SSH, and HTTP inbound traffic"
 
   ingress {
-    from_port   = 443
-    to_port     = 443
+    from_port   = 8080
+    to_port     = 8080
+    protocol    = "tcp"
+    cidr_blocks = ["0.0.0.0/0"]
+  }
+
+  ingress {
+    from_port   = 5000
+    to_port     = 5000
     protocol    = "tcp"
     cidr_blocks = ["0.0.0.0/0"]
   }
@@ -77,7 +84,7 @@ resource "aws_security_group" "allow_tls" {
 
 # Create an EC2 instance
 resource "aws_instance" "example_instance" {
-  ami                    = "ami-0182f373e66f89c85" # Amazon Linux 2 AMI
+  ami                    = "ami-0e86e20dae9224db8" # Amazon Linux 2 AMI
   instance_type          = "t2.micro"              # Adjust instance type as needed
   vpc_security_group_ids = [aws_security_group.allow_tls.id]
   subnet_id              = aws_subnet.public_subnet.id
