@@ -19,6 +19,8 @@ Aqui está uma explicação de cada termo relacionado ao Kubernetes:
    - **Readiness probe**: Verifica se o aplicativo está pronto para receber tráfego. Se falhar, o Kubernetes remove temporariamente o pod da lista de serviços disponíveis.
 
 9. **CronJob**: Executa **Jobs** em horários ou intervalos específicos, semelhantes a cron jobs no Linux. Um **CronJob** é útil para tarefas recorrentes, como backups periódicos ou envios de relatórios. Ele agendará e gerenciará a execução automática dos **Jobs** com base em uma programação definida.
+    
+10. KEDA
 
 #### Install ####
 
