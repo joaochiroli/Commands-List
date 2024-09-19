@@ -41,3 +41,45 @@ sudo mv /tmp/eksctl /usr/local/bin
 eksctl version
 
 ```
+
+LoadBalancer 
+
+```
+apiVersion: v1
+kind: Service
+metadata:
+  name: myapp1-loadbalancer
+  labels: 
+    app: myapp1
+spec:
+  type: LoadBalancer 
+  selector:
+    app: myapp1
+  ports: 
+    - port: 80
+      targetPort: 5000
+```
+
+Deployment 
+```
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: myapp1-deployment
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: myapp1
+  template: 
+    metadata:
+      name: myapp1-pod
+      labels:
+        app: myapp1       
+    spec:
+      containers:
+        - name: myapp1-container
+          image: iesodias/mdc-api-python:latest
+          ports:
+            - containerPort: 5000
+```
