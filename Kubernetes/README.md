@@ -63,23 +63,23 @@ spec:
 Deployment 
 ```
 apiVersion: apps/v1
-kind: Deployment
+kind: Deployment 
 metadata:
-  name: myapp1-deployment
+  name: myapp1-deployment # define o nome do deployment
 spec:
-  replicas: 2
+  replicas: 2 
   selector:
     matchLabels:
-      app: myapp1
-  template: 
+      app: myapp1 # Usados para associar os pods que o Deployment gerencia
+  template: # block defines the Pod template that the Deployment will use to create its replicas
     metadata:
-      name: myapp1-pod
+      name: myapp1-pod # define o nome do pod
       labels:
-        app: myapp1       
+        app: myapp1 # define a label do pod
     spec:
       containers:
-        - name: myapp1-container
-          image: iesodias/mdc-api-python:latest
-          ports:
-            - containerPort: 5000
+      - name: myapp1-container # This gives a name to the container running inside the pod
+        image: iesodias/mdc-api-python:latest
+        ports:
+          - containerPort: 5000 # This means that port 5000 will be exposed inside the container
 ```
