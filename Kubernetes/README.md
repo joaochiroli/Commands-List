@@ -24,6 +24,9 @@ Aqui está uma explicação de cada termo relacionado ao Kubernetes:
     
 10. KEDA
 
+11. O HPA (Horizontal Pod Autoscaler) é um recurso do Kubernetes que ajusta automaticamente o número de réplicas de pods em um Deployment, ReplicaSet, StatefulSet ou ReplicationController com base na utilização de recursos, como CPU ou memória, ou em métricas personalizadas.
+    
+
 
 #### Commands ####
 
@@ -104,4 +107,39 @@ spec:
         image: iesodias/mdc-api-python:latest
         ports:
           - containerPort: 5000 # This means that port 5000 will be exposed inside the container
+```
+
+Autoscaling
+```
+apiVersion: autoscaling/v1
+kind: HorizontalPodAutoscaler
+metadata:
+  name: mdc-app
+  namespace: mdc-app
+spec:
+  maxReplicas: 20 # define max replica count
+  minReplicas: 1  # define min replica count
+  scaleTargetRef:
+    apiVersion: apps/v1
+    kind: Deployment
+    name: mdc-app
+  targetCPUUtilizationPercentage: 10 # target CPU utilization
+```
+
+Service
+```
+apiVersion: v1
+kind: Service
+metadata:
+  name: mdc-app
+  namespace: mdc-app
+  labels:
+    app: mdc-app
+spec:
+  type: ClusterIP
+  selector:
+    app: mdc-app
+  ports:
+    - port: 80
+      targetPort: 5000
 ```
