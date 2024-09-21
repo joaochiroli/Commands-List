@@ -22,6 +22,21 @@ Aqui está uma explicação de cada termo relacionado ao Kubernetes:
     
 10. KEDA
 
+
+#### Commands ####
+
+- `kubectl exec -it <pod-name> -- sh` Connecting to container in a POD
+- `kubectl get pod mdc-app -o yaml` Get pod definition YAML output
+- `kubectl exec -it <pod-name> -- env` Running individual commands in a Container example
+   - kubectl exec -it mdc-app -- env
+   - kubectl exec -it mdc-app -- ls
+   - kubectl exec -it mdc-app -- cat /app/templates_folder/mdc.html
+- `kubectl get replicaset` or `kubectl get rs`
+- `kubectl describe rs`
+- `kubectl get pods -o wide` Get list of Pods with Pod IP and Node in which it is running
+- `kubectl get pods POD_NAME -o yaml` verify the owner of pod 
+      
+
 #### Install ####
 
 Kubectl: Ferramenta genérica para interagir e gerenciar os recursos dentro de qualquer cluster Kubernetes. Ele é usado principalmente dentro do cluster, manipulando objetos como pods, serviços, deployments, etc.
