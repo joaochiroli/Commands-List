@@ -39,6 +39,7 @@ Aqui está uma explicação de cada termo relacionado ao Kubernetes:
 - `kubectl get pods POD_NAME -o yaml` verify the owner of pod
 - `kubectl expose rs <ReplicaSet-Name>  --type=LoadBalancer --port=80 --target-port=8080 --name=<Service-Name-To-Be-Created>` Expose ReplicaSet as a Service
 - `kubectl scale --replicas=10 deployment/<Deployment-Name>` Scale Up the Deployment
+- `kubectl edit deploy -n mdc-app` edit Deployment
 
       
 
