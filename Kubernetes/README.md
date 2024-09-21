@@ -34,7 +34,9 @@ Aqui está uma explicação de cada termo relacionado ao Kubernetes:
 - `kubectl get replicaset` or `kubectl get rs`
 - `kubectl describe rs`
 - `kubectl get pods -o wide` Get list of Pods with Pod IP and Node in which it is running
-- `kubectl get pods POD_NAME -o yaml` verify the owner of pod 
+- `kubectl get pods POD_NAME -o yaml` verify the owner of pod
+- `kubectl expose rs <ReplicaSet-Name>  --type=LoadBalancer --port=80 --target-port=8080 --name=<Service-Name-To-Be-Created>` Expose ReplicaSet as a Service
+
       
 
 #### Install ####
