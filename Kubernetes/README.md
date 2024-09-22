@@ -43,7 +43,10 @@ Aqui está uma explicação de cada termo relacionado ao Kubernetes:
 - `kubectl expose rs <ReplicaSet-Name>  --type=LoadBalancer --port=80 --target-port=8080 --name=<Service-Name-To-Be-Created>` Expose ReplicaSet as a Service
 - `kubectl scale --replicas=10 deployment/<Deployment-Name>` Scale Up the Deployment
 - `kubectl edit deploy -n mdc-app` edit Deployment
-- `kubectl run apache-bench -i --tty --rm --image=httpd -- ab -n 500000 -c 1000 http://YOUR_IP/mdc` Generate load 
+- `kubectl run apache-bench -i --tty --rm --image=httpd -- ab -n 500000 -c 1000 http://YOUR_IP/mdc` Generate load
+- `kubectl get pvc` Get pvc
+- `kubectl get pv` Get pv
+- `kubectl get sc` Get sc
 
       
 
