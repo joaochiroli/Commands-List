@@ -207,3 +207,19 @@ d (){
 }
 
 ```
+##### Controle de recursos com Cgroup
+
+No linux, o cgroup é criado no /sys/fs/cgroup
+```
+mount -l | grep cgroup
+
+ou
+
+mount -l
+```
+Criar um subfolder no cgroupfs 
+```
+mkdir /sys/fs/cgroup/my_cgroup
+```
+
+
